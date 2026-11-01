@@ -1,9 +1,13 @@
 import { loadAllEpisodes } from './data.js';
 import { isWatched } from './storage.js';
 import { el } from './dom.js';
+import { isLocalComputer } from './env.js';
 
 const listEl = document.getElementById('episode-list');
 const statusEl = document.getElementById('status');
+
+// 編輯模式入口只在家裡電腦顯示
+document.getElementById('settings-link').hidden = !isLocalComputer;
 
 function renderCard(ep) {
   const card = el('a', 'episode-card tappable');

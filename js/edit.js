@@ -3,6 +3,7 @@ import { createPlayer } from './player.js';
 import { speak } from './speech.js';
 import { el } from './dom.js';
 import { createCaptionPanel, loadCaptions } from './caption-panel.js';
+import { isLocalComputer } from './env.js';
 import {
   canWriteFiles,
   getProjectDir,
@@ -542,6 +543,11 @@ function start() {
 
 if (location.protocol === 'file:') {
   document.body.prepend(el('p', 'message error', '請用本機 server 開啟（見 README）'));
+} else if (!isLocalComputer) {
+  // 網路版與 iPad：沒有 serve.py 可以存檔，直接不開放
+  document.body.prepend(
+    el('p', 'message error', '編輯模式只能在家裡電腦上使用：執行 python tools/serve.py 後開 http://localhost:8000'),
+  );
 } else if (passedGate()) {
   start();
 } else {
