@@ -1,0 +1,30 @@
+{
+  "id": "ep11",
+  "episode": 11,
+  "videoId": "Nvf4KZ6KOOM",
+  "title": { "en": "One Smart Dinosaur", "zh": "聰明的恐龍" },
+  "dinosaurs": [
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" },
+    { "en": "Apatosaurus", "zh": "迷惑龍", "emoji": "🦕" },
+    { "en": "Brachiosaurus", "zh": "腕龍", "emoji": "🦕" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "shell", "zh": "貝殼", "time": 7.2, "emoji": "🐚" },
+    { "en": "bug", "zh": "蟲", "time": 11.4, "emoji": "🐞" },
+    { "en": "dinner", "zh": "晚餐", "time": 531.5, "emoji": "🍽️" },
+    { "en": "ten", "zh": "十", "time": 558.4, "emoji": "🔟" },
+    { "en": "fruit", "zh": "水果", "time": 588.4, "emoji": "🍎" },
+    { "en": "nuts", "zh": "堅果", "time": 590.8, "emoji": "🥜" }
+  ],
+  "sentences": [
+    { "en": "Can I please have a turn?", "zh": "可以換我玩嗎？", "start": 31.7, "end": 34.2 },
+    { "en": "Good morning, Mr. Conductor!", "zh": "列車長，早安！", "start": 174.2, "end": 177.4 },
+    { "en": "Sing it, please!", "zh": "請唱給我們聽！", "start": 271.3, "end": 273.7 },
+    { "en": "Nice to meet you!", "zh": "很高興認識你！", "start": 510, "end": 511.7 },
+    { "en": "Tiny and I will have the fish.", "zh": "Tiny 和我要吃魚。", "start": 569.4, "end": 571.8 },
+    { "en": "I love this!", "zh": "我好喜歡這個！", "start": 571.5, "end": 573.2 },
+    { "en": "I am so proud of you!", "zh": "我真為你驕傲！", "start": 635.2, "end": 637.9 }
+  ]
+}

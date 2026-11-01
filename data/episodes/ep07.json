@@ -1,0 +1,29 @@
+{
+  "id": "ep07",
+  "episode": 7,
+  "videoId": "xEjwH-pNKws",
+  "title": { "en": "I'm a T. rex", "zh": "我是暴龍" },
+  "dinosaurs": [
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Giganotosaurus", "zh": "南方巨獸龍", "emoji": "🦖" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "orange", "zh": "橘色", "time": 38.9, "emoji": "🟠" },
+    { "en": "blue", "zh": "藍色", "time": 39.6, "emoji": "🔵" },
+    { "en": "nose", "zh": "鼻子", "time": 144.7, "emoji": "👃" },
+    { "en": "ten", "zh": "十", "time": 308.7, "emoji": "🔟" },
+    { "en": "meat", "zh": "肉", "time": 78.8, "emoji": "🍖" },
+    { "en": "arms", "zh": "手臂", "time": 222.8, "emoji": "💪" }
+  ],
+  "sentences": [
+    { "en": "Have fun!", "zh": "玩得開心！", "start": 11.9, "end": 13.2 },
+    { "en": "I'm getting hungry.", "zh": "我肚子餓了。", "start": 83.8, "end": 86.1 },
+    { "en": "I love adventures!", "zh": "我愛冒險！", "start": 99.2, "end": 101.7 },
+    { "en": "I'm a T. rex!", "zh": "我是暴龍！", "start": 241.2, "end": 243.5 },
+    { "en": "You can come out now.", "zh": "你們可以出來了。", "start": 358.9, "end": 361.2 },
+    { "en": "My family loves me.", "zh": "我的家人愛我。", "start": 466.3, "end": 468.8 },
+    { "en": "Good night, kids!", "zh": "孩子們，晚安！", "start": 623.6, "end": 625.6 }
+  ]
+}

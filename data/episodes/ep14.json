@@ -1,0 +1,29 @@
+{
+  "id": "ep14",
+  "episode": 14,
+  "videoId": "EJip4yiJmGs",
+  "title": { "en": "Petey the Peteinosaurus", "zh": "小翼龍 Petey" },
+  "dinosaurs": [
+    { "en": "Peteinosaurus", "zh": "蓓天翼龍", "emoji": "🦅" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "bush", "zh": "灌木叢", "time": 24.1, "emoji": "🌳" },
+    { "en": "beak", "zh": "鳥嘴", "time": 116, "emoji": "🐦" },
+    { "en": "green", "zh": "綠色", "time": 322.3, "emoji": "🟢" },
+    { "en": "bugs", "zh": "蟲子", "time": 428.3, "emoji": "🐛" },
+    { "en": "beetle", "zh": "甲蟲", "time": 439.7, "emoji": "🪲" },
+    { "en": "circles", "zh": "圓圈", "time": 645.6, "emoji": "⭕" }
+  ],
+  "sentences": [
+    { "en": "You found me again!", "zh": "你又找到我了！", "start": 22.2, "end": 24.7 },
+    { "en": "Can we go with you, Mom?", "zh": "媽媽，我們可以跟你去嗎？", "start": 145.7, "end": 147.9 },
+    { "en": "Welcome to our valley!", "zh": "歡迎來到我們的山谷！", "start": 276.8, "end": 278.6 },
+    { "en": "I like my teeth.", "zh": "我喜歡我的牙齒。", "start": 388.5, "end": 390.6 },
+    { "en": "Throw it again!", "zh": "再丟一次！", "start": 526.5, "end": 528.2 },
+    { "en": "We're all friends now!", "zh": "我們現在都是朋友了！", "start": 547.3, "end": 549.5 },
+    { "en": "Let's go fishing, Dad!", "zh": "爸爸，我們去釣魚吧！", "start": 653.9, "end": 659.1 }
+  ]
+}

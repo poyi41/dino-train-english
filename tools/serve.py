@@ -47,11 +47,11 @@ def is_loopback(host):
 
 
 def find_caption_file(video_id):
-    """raw/ 裡這支影片的字幕：優先英文原始自動字幕（yt-dlp 的 en-orig）。"""
-    for name in (f"{video_id}.en-orig.json3", f"{video_id}.en.json3"):
+    """raw/ 裡這支影片的字幕：優先英文原始自動字幕（en-orig），srv3 優先（一定有逐字時間）。"""
+    for name in (f"{video_id}.en-orig.srv3", f"{video_id}.en-orig.json3", f"{video_id}.en.srv3", f"{video_id}.en.json3"):
         if (RAW_DIR / name).is_file():
             return RAW_DIR / name
-    matches = sorted(RAW_DIR.glob(f"{video_id}*.json3"))
+    matches = sorted(RAW_DIR.glob(f"{video_id}*.srv3")) + sorted(RAW_DIR.glob(f"{video_id}*.json3"))
     return matches[0] if matches else None
 
 

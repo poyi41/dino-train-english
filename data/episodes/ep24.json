@@ -1,0 +1,30 @@
+{
+  "id": "ep24",
+  "episode": 24,
+  "videoId": "UmU-OsRbu4k",
+  "title": { "en": "Hootin' Hadrosaurs", "zh": "會唱歌的鴨嘴龍" },
+  "dinosaurs": [
+    { "en": "Corythosaurus", "zh": "冠龍", "emoji": "🦕" },
+    { "en": "Parasaurolophus", "zh": "副櫛龍", "emoji": "🦕" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "right", "zh": "右邊", "time": 70, "emoji": "➡️" },
+    { "en": "duck", "zh": "鴨子", "time": 158.6, "emoji": "🦆" },
+    { "en": "log", "zh": "木頭", "time": 283.3, "emoji": "🪵" },
+    { "en": "music", "zh": "音樂", "time": 0.9, "emoji": "🎵" },
+    { "en": "sing", "zh": "唱歌", "time": 159.4, "emoji": "🎤" },
+    { "en": "star", "zh": "明星", "time": 501.9, "emoji": "⭐" }
+  ],
+  "sentences": [
+    { "en": "Stand up straight!", "zh": "站好！", "start": 74, "end": 75.8 },
+    { "en": "Take your seats, everyone!", "zh": "大家坐好！", "start": 82.9, "end": 85 },
+    { "en": "Sit down.", "zh": "坐下。", "start": 86.1, "end": 88.1 },
+    { "en": "Nice to meet you all!", "zh": "很高興認識大家！", "start": 345.9, "end": 348 },
+    { "en": "I'm having so much fun!", "zh": "我玩得好開心！", "start": 525.3, "end": 527.8 },
+    { "en": "What a day!", "zh": "真是美好的一天！", "start": 634.5, "end": 636.7 },
+    { "en": "Time to sleep.", "zh": "該睡覺了。", "start": 645.2, "end": 647.6 }
+  ]
+}

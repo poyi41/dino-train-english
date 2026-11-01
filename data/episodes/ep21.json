@@ -1,0 +1,29 @@
+{
+  "id": "ep21",
+  "episode": 21,
+  "videoId": "rUp24yJuoEo",
+  "title": { "en": "Campout", "zh": "去露營" },
+  "dinosaurs": [
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "doll", "zh": "娃娃", "time": 12.2, "emoji": "🪆" },
+    { "en": "night", "zh": "晚上", "time": 85.4, "emoji": "🌙" },
+    { "en": "moon", "zh": "月亮", "time": 115.4, "emoji": "🌕" },
+    { "en": "frog", "zh": "青蛙", "time": 520, "emoji": "🐸" },
+    { "en": "tongue", "zh": "舌頭", "time": 529.6, "emoji": "👅" },
+    { "en": "snakes", "zh": "蛇", "time": 618.8, "emoji": "🐍" },
+    { "en": "turtles", "zh": "烏龜", "time": 619.8, "emoji": "🐢" }
+  ],
+  "sentences": [
+    { "en": "I can't believe it!", "zh": "真不敢相信！", "start": 5.4, "end": 7.4 },
+    { "en": "Are you okay?", "zh": "你還好嗎？", "start": 43.3, "end": 45.3 },
+    { "en": "Let's get to work!", "zh": "我們開始動手吧！", "start": 188.7, "end": 190.8 },
+    { "en": "Tell us the story!", "zh": "講故事給我們聽！", "start": 294.4, "end": 296.3 },
+    { "en": "Look at all those stars!", "zh": "你看那些星星！", "start": 405.7, "end": 408.4 },
+    { "en": "I'm not scared.", "zh": "我不害怕。", "start": 410.2, "end": 412.1 },
+    { "en": "Good night!", "zh": "晚安！", "start": 602.7, "end": 604.5 }
+  ]
+}

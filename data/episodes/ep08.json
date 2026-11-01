@@ -1,0 +1,29 @@
+{
+  "id": "ep08",
+  "episode": 8,
+  "videoId": "w15NP755U5E",
+  "title": { "en": "T. rex Teeth", "zh": "暴龍的牙齒" },
+  "dinosaurs": [
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "stick", "zh": "樹枝", "time": 8.7, "emoji": "🪵" },
+    { "en": "foot", "zh": "腳", "time": 23.2, "emoji": "🦶" },
+    { "en": "tooth", "zh": "牙齒", "time": 43.5, "emoji": "🦷" },
+    { "en": "mouth", "zh": "嘴巴", "time": 47.7, "emoji": "👄" },
+    { "en": "smile", "zh": "微笑", "time": 65.1, "emoji": "😊" },
+    { "en": "two", "zh": "二", "time": 295.2, "emoji": "2️⃣" },
+    { "en": "breakfast", "zh": "早餐", "time": 406.4, "emoji": "🍳" }
+  ],
+  "sentences": [
+    { "en": "My tooth came out!", "zh": "我的牙齒掉了！", "start": 44, "end": 46.1 },
+    { "en": "Can I hold it?", "zh": "我可以拿拿看嗎？", "start": 58.3, "end": 60 },
+    { "en": "Can I come too?", "zh": "我也可以去嗎？", "start": 104.4, "end": 106.7 },
+    { "en": "I love the flowers here.", "zh": "我喜歡這裡的花。", "start": 221.5, "end": 223.9 },
+    { "en": "Are you hungry?", "zh": "你們肚子餓嗎？", "start": 385.1, "end": 387.3 },
+    { "en": "I feel so much better now.", "zh": "我現在好多了。", "start": 532.1, "end": 535.3 },
+    { "en": "See you again soon!", "zh": "下次見！", "start": 535.8, "end": 538.2 }
+  ]
+}

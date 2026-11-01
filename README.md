@@ -41,22 +41,23 @@ python tools/serve.py
 需要先安裝 yt-dlp（`pip install yt-dlp`）。只抓字幕、不下載影片：
 
 ```bash
-yt-dlp --skip-download --ignore-no-formats-error --write-auto-subs --sub-langs en-orig --sub-format json3 --extractor-args "youtube:player_client=web_embedded" -o "raw/%(id)s" "https://www.youtube.com/watch?v=<影片ID>"
+yt-dlp --skip-download --ignore-no-formats-error --write-auto-subs --sub-langs en-orig --sub-format srv3 --extractor-args "youtube:player_client=web_embedded" -o "raw/%(id)s" "https://www.youtube.com/watch?v=<影片ID>"
 ```
 
 - 這個頻道是兒童影片，yt-dlp 預設的方式會說「This video is not available」，所以要加 `player_client=web_embedded`
+- 要用 `srv3` 格式：YouTube 給的 json3 有時沒有逐字時間，秒數就算不準
 - 這個頻道只有 YouTube 自動字幕，會有錯字（尤其恐龍名字），句子要自己對照影片修正
 
 把字幕轉成一行一行附秒數的文字，挑句子用：
 
 ```bash
-python tools/captions_to_lines.py raw/<影片ID>.en-orig.json3 > raw/epXX-lines.txt
+python tools/captions_to_lines.py raw/<影片ID>.en-orig.srv3 > raw/epXX-lines.txt
 ```
 
 挑好句子後查精確秒數（依每個字的時間計算）：
 
 ```bash
-python tools/captions_to_lines.py raw/<影片ID>.en-orig.json3 "are we there yet" "tickets please"
+python tools/captions_to_lines.py raw/<影片ID>.en-orig.srv3 "are we there yet" "tickets please"
 ```
 
 填進 JSON 時，`start` 建議往前 0.3 秒、`end` 往後 0.5 秒，避免頭尾的字被切掉。

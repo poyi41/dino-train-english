@@ -1,0 +1,30 @@
+{
+  "id": "ep18",
+  "episode": 18,
+  "videoId": "hnvuW0qLs9s",
+  "title": { "en": "Laura the Giganotosaurus", "zh": "南方巨獸龍 Laura" },
+  "dinosaurs": [
+    { "en": "Giganotosaurus", "zh": "南方巨獸龍", "emoji": "🦖" },
+    { "en": "Avisaurus", "zh": "鳥龍", "emoji": "🐦" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "bird", "zh": "鳥", "time": 24.5, "emoji": "🐦" },
+    { "en": "eye", "zh": "眼睛", "time": 125.4, "emoji": "👁️" },
+    { "en": "draw", "zh": "畫畫", "time": 325.7, "emoji": "✏️" },
+    { "en": "river", "zh": "河", "time": 311.2, "emoji": "🏞️" },
+    { "en": "ears", "zh": "耳朵", "time": 374.5, "emoji": "👂" },
+    { "en": "star", "zh": "星星", "time": 628.1, "emoji": "⭐" }
+  ],
+  "sentences": [
+    { "en": "It is beautiful!", "zh": "好漂亮！", "start": 27.6, "end": 29.6 },
+    { "en": "Let's follow it!", "zh": "我們跟著它！", "start": 28.8, "end": 30.7 },
+    { "en": "Hi, Laura!", "zh": "嗨，Laura！", "start": 140.3, "end": 142 },
+    { "en": "Yes, please!", "zh": "好，麻煩你！", "start": 333.5, "end": 335.7 },
+    { "en": "Stop the train!", "zh": "停車！", "start": 376.2, "end": 378.7 },
+    { "en": "I would love to!", "zh": "我很樂意！", "start": 505.9, "end": 508.7 },
+    { "en": "Go to sleep now.", "zh": "現在去睡覺。", "start": 645.5, "end": 647.3 }
+  ]
+}

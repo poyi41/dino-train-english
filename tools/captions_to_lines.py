@@ -1,19 +1,44 @@
-"""把 YouTube 自動字幕（json3 格式）轉成「一行一句、附秒數」的純文字，方便挑句子。
+"""把 YouTube 自動字幕（srv3 或 json3 格式）轉成「一行一句、附秒數」的純文字，方便挑句子。
 
 用法：
-    python tools/captions_to_lines.py raw/<影片ID>.en-orig.json3 > raw/ep01-lines.txt
+    python tools/captions_to_lines.py raw/<影片ID>.en-orig.srv3 > raw/ep01-lines.txt
 
 每行格式：  開始秒數 - 結束秒數 | 字幕文字
 自動字幕的一行常常不是一整句，挑好句子後用查詢模式取得精確秒數：
-    python tools/captions_to_lines.py raw/<影片ID>.en-orig.json3 "are we there yet" "tickets please"
+    python tools/captions_to_lines.py raw/<影片ID>.en-orig.srv3 "are we there yet" "tickets please"
+
+請優先用 srv3：YouTube 有時給的 json3 沒有逐字時間，srv3 則一直都有。
 """
 
 import json
 import sys
+import xml.etree.ElementTree as ET
+
+
+def load_words_srv3(path):
+    words = []
+    for p in ET.parse(path).getroot().iter("p"):
+        start_ms = int(p.get("t", 0))
+        spans = p.findall("s")
+        if spans:
+            for s in spans:
+                # 偶爾一段裡有好幾個字（例如 "2 3"），拆開讓片語查詢找得到
+                for text in (s.text or "").split():
+                    words.append(((start_ms + int(s.get("t", 0))) / 1000, text))
+        elif (p.text or "").strip():
+            # 沒有逐字時間的整段文字（例如 [Music]），每個字都用這段的開始時間
+            for text in p.text.split():
+                words.append((start_ms / 1000, text))
+        else:
+            words.append((None, None))  # 換行
+    return words
 
 
 def load_words(path):
     """回傳 [(開始秒, 文字), ...]，換行以 None 表示。"""
+    if str(path).endswith(".srv3"):
+        return load_words_srv3(path)
+
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
 

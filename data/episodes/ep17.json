@@ -1,0 +1,29 @@
+{
+  "id": "ep17",
+  "episode": 17,
+  "videoId": "sIMq2zKj6FM",
+  "title": { "en": "Flowers for Mom", "zh": "送給媽媽的花" },
+  "dinosaurs": [
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "bath", "zh": "洗澡", "time": 136.3, "emoji": "🛁" },
+    { "en": "nap", "zh": "午睡", "time": 140.4, "emoji": "😴" },
+    { "en": "bees", "zh": "蜜蜂", "time": 222.1, "emoji": "🐝" },
+    { "en": "yellow", "zh": "黃色", "time": 256.8, "emoji": "🟡" },
+    { "en": "six", "zh": "六", "time": 368.6, "emoji": "6️⃣" },
+    { "en": "pink", "zh": "粉紅色", "time": 370.9, "emoji": "🩷" },
+    { "en": "white", "zh": "白色", "time": 509.3, "emoji": "⚪" }
+  ],
+  "sentences": [
+    { "en": "Follow me!", "zh": "跟我來！", "start": 6.5, "end": 8.7 },
+    { "en": "Let's get Mom a special present!", "zh": "我們送媽媽一份特別的禮物！", "start": 54.7, "end": 57.7 },
+    { "en": "Have fun, kids!", "zh": "孩子們，玩得開心！", "start": 142.8, "end": 145.3 },
+    { "en": "I see some little flowers!", "zh": "我看到一些小花！", "start": 206.3, "end": 208.8 },
+    { "en": "She'll love them!", "zh": "她一定會喜歡！", "start": 533.1, "end": 535.4 },
+    { "en": "Happy Mother's Day!", "zh": "母親節快樂！", "start": 633.7, "end": 636.7 },
+    { "en": "Thank you, kids!", "zh": "謝謝你們，孩子們！", "start": 643.5, "end": 646 }
+  ]
+}

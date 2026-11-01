@@ -1,0 +1,31 @@
+{
+  "id": "ep26",
+  "episode": 26,
+  "videoId": "GovbDlVjKhk",
+  "title": { "en": "Hatching Party", "zh": "孵蛋派對" },
+  "dinosaurs": [
+    { "en": "Corythosaurus", "zh": "冠龍", "emoji": "🦕" },
+    { "en": "Velociraptor", "zh": "伶盜龍", "emoji": "🦖" },
+    { "en": "Triceratops", "zh": "三角龍", "emoji": "🦕" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "song", "zh": "歌", "time": 11.3, "emoji": "🎵" },
+    { "en": "brothers", "zh": "兄弟", "time": 25.6, "emoji": "👦" },
+    { "en": "eggs", "zh": "蛋", "time": 21.5, "emoji": "🥚" },
+    { "en": "baby", "zh": "寶寶", "time": 243.1, "emoji": "👶" },
+    { "en": "warm", "zh": "溫暖的", "time": 279.4, "emoji": "🧣" },
+    { "en": "heart", "zh": "心", "time": 564.8, "emoji": "❤️" }
+  ],
+  "sentences": [
+    { "en": "I can't wait to see the eggs!", "zh": "我好想快點看到蛋！", "start": 27.8, "end": 30.2 },
+    { "en": "Look at me!", "zh": "看我！", "start": 68.9, "end": 70.9 },
+    { "en": "Welcome to my nest!", "zh": "歡迎來我的巢！", "start": 483.2, "end": 485.4 },
+    { "en": "They're hatching! They're hatching!", "zh": "孵出來了！孵出來了！", "start": 541.2, "end": 545.2 },
+    { "en": "I love you with all my heart.", "zh": "我全心全意愛你們。", "start": 563.9, "end": 566.8 },
+    { "en": "Let's play Follow the Leader!", "zh": "我們來玩跟著領袖走！", "start": 590.5, "end": 592.9 },
+    { "en": "Can you tell us again, please?", "zh": "可以再講一次給我們聽嗎？", "start": 640, "end": 644.6 }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ep22",
+  "episode": 22,
+  "videoId": "9EgQZbIi8fA",
+  "title": { "en": "Dinosaur Poop", "zh": "恐龍便便" },
+  "dinosaurs": [
+    { "en": "Brachiosaurus", "zh": "腕龍", "emoji": "🦕" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "picnic", "zh": "野餐", "time": 22.3, "emoji": "🧺" },
+    { "en": "potty", "zh": "上廁所", "time": 49.1, "emoji": "🚽" },
+    { "en": "vegetables", "zh": "蔬菜", "time": 93.8, "emoji": "🥦" },
+    { "en": "rock", "zh": "石頭", "time": 492.7, "emoji": "🪨" },
+    { "en": "green", "zh": "綠色", "time": 496.2, "emoji": "🟢" },
+    { "en": "poop", "zh": "便便", "time": 463.5, "emoji": "💩" }
+  ],
+  "sentences": [
+    { "en": "I can't wait!", "zh": "我等不及了！", "start": 21, "end": 22.6 },
+    { "en": "We'd love to!", "zh": "我們很樂意！", "start": 218.6, "end": 220.5 },
+    { "en": "Snack time! Snack time!", "zh": "點心時間到了！", "start": 352.2, "end": 356.2 },
+    { "en": "Thanks, Buddy!", "zh": "謝謝你，Buddy！", "start": 404.3, "end": 406.3 },
+    { "en": "I'll close my eyes and count.", "zh": "我閉上眼睛數數。", "start": 406.5, "end": 409.6 },
+    { "en": "That is so cool!", "zh": "好酷喔！", "start": 493.8, "end": 497.1 },
+    { "en": "Thanks so much for having us.", "zh": "謝謝你們招待我們。", "start": 568.4, "end": 571.2 }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ep10",
+  "episode": 10,
+  "videoId": "QLj01VVoaEk",
+  "title": { "en": "Ned the Quadruped", "zh": "四腳走路的 Ned" },
+  "dinosaurs": [
+    { "en": "Brachiosaurus", "zh": "腕龍", "emoji": "🦕" },
+    { "en": "Giganotosaurus", "zh": "南方巨獸龍", "emoji": "🦖" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "train", "zh": "火車", "time": 28.7, "emoji": "🚂" },
+    { "en": "whistle", "zh": "汽笛", "time": 170.8, "emoji": "📯" },
+    { "en": "school", "zh": "學校", "time": 216.3, "emoji": "🏫" },
+    { "en": "picture", "zh": "圖片", "time": 191.9, "emoji": "🖼️" },
+    { "en": "slow", "zh": "慢的", "time": 331.5, "emoji": "🐢" },
+    { "en": "tea", "zh": "茶", "time": 454.1, "emoji": "🍵" }
+  ],
+  "sentences": [
+    { "en": "Good luck!", "zh": "祝你好運！", "start": 72.1, "end": 73.8 },
+    { "en": "I love everything about it.", "zh": "我全部都喜歡。", "start": 159.6, "end": 161.7 },
+    { "en": "I like trains!", "zh": "我喜歡火車！", "start": 218, "end": 222.1 },
+    { "en": "Good morning! My name is Buddy.", "zh": "早安！我叫 Buddy。", "start": 235.4, "end": 238.6 },
+    { "en": "Can we, Mom? Please?", "zh": "媽媽，可以嗎？拜託？", "start": 299.6, "end": 303.9 },
+    { "en": "Hey, Mom! Hey, Dad!", "zh": "嗨，媽媽！嗨，爸爸！", "start": 592.3, "end": 595.7 },
+    { "en": "See you soon!", "zh": "待會見！", "start": 646.4, "end": 648.2 }
+  ]
+}

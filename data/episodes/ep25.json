@@ -1,0 +1,30 @@
+{
+  "id": "ep25",
+  "episode": 25,
+  "videoId": "peBl3lrKglU",
+  "title": { "en": "T. rex Migration", "zh": "暴龍大遷徙" },
+  "dinosaurs": [
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" },
+    { "en": "Avisaurus", "zh": "鳥龍", "emoji": "🐦" },
+    { "en": "Giganotosaurus", "zh": "南方巨獸龍", "emoji": "🦖" },
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "north", "zh": "北方", "time": 177, "emoji": "🧭" },
+    { "en": "spring", "zh": "春天", "time": 259.6, "emoji": "🌸" },
+    { "en": "four", "zh": "四", "time": 320, "emoji": "4️⃣" },
+    { "en": "trees", "zh": "樹", "time": 266.4, "emoji": "🌳" },
+    { "en": "vacation", "zh": "假期", "time": 606.5, "emoji": "🧳" },
+    { "en": "summer", "zh": "夏天", "time": 650.7, "emoji": "🏖️" }
+  ],
+  "sentences": [
+    { "en": "Can you guess where we're going?", "zh": "你猜得到我們要去哪裡嗎？", "start": 18.7, "end": 21.1 },
+    { "en": "We love mysteries!", "zh": "我們最愛解謎了！", "start": 136.3, "end": 138.9 },
+    { "en": "All aboard!", "zh": "大家上車！", "start": 229.6, "end": 232 },
+    { "en": "Come on, Tiny! Let's look around.", "zh": "Tiny 快來！我們到處看看。", "start": 298.4, "end": 301 },
+    { "en": "What a great view!", "zh": "風景好棒！", "start": 383.5, "end": 386.1 },
+    { "en": "I see him!", "zh": "我看到他了！", "start": 432.2, "end": 433.8 },
+    { "en": "Hey, Dad!", "zh": "嗨，爸爸！", "start": 533.4, "end": 535.5 }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ep02",
+  "episode": 2,
+  "videoId": "iKdjGPzCl98",
+  "title": { "en": "Tiny Likes Fish", "zh": "Tiny 愛吃魚" },
+  "dinosaurs": [
+    { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" },
+    { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" }
+  ],
+  "words": [
+    { "en": "dad", "zh": "爸爸", "time": 20, "emoji": "👨" },
+    { "en": "five", "zh": "五", "time": 9.1, "emoji": "5️⃣" },
+    { "en": "fish", "zh": "魚", "time": 35.2, "emoji": "🐟" },
+    { "en": "eyes", "zh": "眼睛", "time": 50, "emoji": "👀" },
+    { "en": "teeth", "zh": "牙齒", "time": 51.2, "emoji": "🦷" },
+    { "en": "wings", "zh": "翅膀", "time": 178.8, "emoji": "🪽" },
+    { "en": "water", "zh": "水", "time": 174, "emoji": "💧" }
+  ],
+  "sentences": [
+    { "en": "I love fish!", "zh": "我愛吃魚！", "start": 34.9, "end": 37.5 },
+    { "en": "Come on, let's go!", "zh": "快點，走吧！", "start": 142.8, "end": 145.4 },
+    { "en": "Look at me!", "zh": "看我！", "start": 277.2, "end": 279.2 },
+    { "en": "Watch me, Dad!", "zh": "爸爸，看我！", "start": 322.9, "end": 324.4 },
+    { "en": "Get ready, Buddy!", "zh": "Buddy，準備好！", "start": 530.9, "end": 533.4 },
+    { "en": "We work together.", "zh": "我們一起合作。", "start": 621.5, "end": 623.5 },
+    { "en": "I'm so proud of you!", "zh": "我真為你驕傲！", "start": 623.5, "end": 625.9 }
+  ]
+}
