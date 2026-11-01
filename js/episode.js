@@ -2,7 +2,8 @@ import { loadEpisode } from './data.js';
 import { createPlayer } from './player.js';
 import { speak } from './speech.js';
 import { el } from './dom.js';
-import { addProgress, getProgress, isWatched, markWatched } from './storage.js';
+import { addProgress, getProgress, isWatched, markWatched, unmarkWatched } from './storage.js';
+import { askAdult } from './adult.js';
 import { loadDinosaurs, stampDinosaur } from './dinosaurs.js';
 import { showStampCeremony } from './stamp.js';
 
@@ -163,16 +164,20 @@ function trackWatching(ep, playerReady) {
   if (before && !isWatched(ep.id)) showProgress(before / (700 * WATCHED_RATIO), false);
 }
 
-// 大人手動標記（答一題加法，避免孩子自己按）
+// 大人手動標記看完，或取消誤標（印章與進度一起拿掉）
 function setupAdultMark(ep, playerReady) {
   const btn = $('adult-mark');
-  btn.hidden = isWatched(ep.id);
+  const label = () => {
+    btn.textContent = isWatched(ep.id) ? '大人用：取消這集的看完紀錄' : '大人用：標記這集已看完';
+  };
+  label();
   btn.addEventListener('click', () => {
-    const a = 10 + Math.floor(Math.random() * 10);
-    const b = 10 + Math.floor(Math.random() * 10);
-    if (Number(prompt(`大人確認：${a} + ${b} = ?`)) === a + b) {
-      btn.hidden = true;
-      completeEpisode(ep, playerReady);
+    if (!askAdult()) return;
+    if (!isWatched(ep.id)) {
+      completeEpisode(ep, playerReady).then(label);
+    } else if (confirm('確定要取消這集的看完紀錄嗎？印章也會一起拿掉。')) {
+      unmarkWatched(ep.id);
+      location.reload();
     }
   });
 }

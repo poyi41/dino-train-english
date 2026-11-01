@@ -35,6 +35,20 @@ export function markWatched(episodeId) {
   return true;
 }
 
+// 取消某一集的看完紀錄（印章跟著消失），播放進度也歸零
+export function unmarkWatched(episodeId) {
+  write('watched', getWatched().filter((id) => id !== episodeId));
+  const progress = getProgress();
+  delete progress[episodeId];
+  write('progress', progress);
+}
+
+// 全部重來：清掉所有看完紀錄、印章與進度
+export function resetAll() {
+  write('watched', []);
+  write('progress', {});
+}
+
 // 每集累計播放的秒數：{ ep01: 312, ... }。分好幾次看也會累加
 export function getProgress() {
   return read('progress', {});

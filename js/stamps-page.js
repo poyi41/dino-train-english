@@ -1,6 +1,7 @@
 // 印章簿：每集一格。看完的格子蓋著那集主角恐龍的印章（點了唸名字），還沒看的格子點了去看那一集
 import { loadAllEpisodes } from './data.js';
-import { isWatched } from './storage.js';
+import { isWatched, resetAll } from './storage.js';
+import { askAdult } from './adult.js';
 import { loadDinosaurs, stampDinosaur, dinoPicture } from './dinosaurs.js';
 import { speak } from './speech.js';
 import { el } from './dom.js';
@@ -39,5 +40,13 @@ async function init() {
     statusEl.classList.add('error');
   }
 }
+
+document.getElementById('reset-all').addEventListener('click', () => {
+  if (!askAdult()) return;
+  if (confirm('確定要全部重來嗎？這台裝置的看完紀錄、印章和觀看進度都會清除，無法復原。')) {
+    resetAll();
+    location.reload();
+  }
+});
 
 init();
