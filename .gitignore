@@ -5,3 +5,6 @@ raw/
 
 .DS_Store
 Thumbs.db
+
+# Python 快取
+__pycache__/
