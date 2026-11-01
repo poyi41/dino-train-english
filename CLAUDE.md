@@ -20,7 +20,8 @@
 - **執行方式**：`python tools/serve.py`，然後開 `http://localhost:8000`
   （IFrame API 不能在 `file://` 下運作）。server 永遠服務它所在的專案資料夾，不管從哪裡執行
 - **字幕檔**：下載的字幕檔只當整理教材的原始資料，**不放進網站、不 commit 進 repo**
-  （放在 `raw/` 並由 `.gitignore` 排除）
+  （放在 `raw/` 並由 `.gitignore` 排除）。唯一例外：編輯模式的字幕面板透過
+  `GET /api/captions/<videoId>` 讀取，只限執行 server 的那台電腦；孩子的頁面與 iPad 都讀不到
 - **進度儲存**：只用 `localStorage`，不收集、不傳送任何資料到外部
 
 ## 介面原則（平板 + 6 歲）
@@ -69,6 +70,8 @@
    - 存檔 `POST /api/episodes/<id>`（`tools/serve.py`），server 會自動把新集數加進 `episodes.json`
    - 安全限制：只接受 localhost 的存檔、檢查 Origin、只能寫 `data/episodes/epNN.json`；
      不提供 `.git`、`.claude`、`raw/`、`tools/` 等檔案。iPad 只能看、不能存
+   - 字幕面板（`js/caption-panel.js`）：顯示 `raw/<videoId>.en-orig.json3`，跟著影片標亮；
+     選取文字按 ➕ 加成句子，秒數依逐字時間計算（開始 −0.3 秒、結束 +0.5 秒，與 `tools/captions_to_lines.py` 一致）
    - 沒用 `serve.py` 時的備案：File System Access API（電腦版 Edge / Chrome，要選資料夾）→ 下載 JSON
    - 存出的 JSON 固定欄位順序、陣列每筆一行（見 `formatEpisode()`），手動編輯時請保持同樣格式
 

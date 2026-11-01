@@ -7,6 +7,7 @@
 只用 Python 內建模組。安全限制：
 - 只有這台電腦本身（localhost）可以存檔；iPad 等其他裝置只能看
 - 只能寫 data/episodes/epNN.json，並自動把新集數加進 data/episodes.json
+- 編輯模式的字幕面板讀 raw/ 字幕（/api/captions/<影片ID>），同樣只限這台電腦
 - 不提供 .git、.claude、raw/、tools/ 等不屬於網站的檔案
 """
 
@@ -22,11 +23,15 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote
 
+from captions_to_lines import load_words, split_lines
+
 ROOT = Path(__file__).resolve().parent.parent
 EPISODES_DIR = ROOT / "data" / "episodes"
 INDEX_FILE = ROOT / "data" / "episodes.json"
 EPISODE_ID = re.compile(r"^ep\d{2,}$")
 SAVE_PATH = re.compile(r"^/api/episodes/(ep\d{2,})$")
+CAPTIONS_PATH = re.compile(r"^/api/captions/([\w-]{11})$")
+RAW_DIR = ROOT / "raw"
 HIDDEN_TOP_LEVEL = {"raw", "tools"}
 MAX_BODY = 1_000_000
 
@@ -41,6 +46,15 @@ def is_loopback(host):
     return addr.is_loopback
 
 
+def find_caption_file(video_id):
+    """raw/ 裡這支影片的字幕：優先英文原始自動字幕（yt-dlp 的 en-orig）。"""
+    for name in (f"{video_id}.en-orig.json3", f"{video_id}.en.json3"):
+        if (RAW_DIR / name).is_file():
+            return RAW_DIR / name
+    matches = sorted(RAW_DIR.glob(f"{video_id}*.json3"))
+    return matches[0] if matches else None
+
+
 def write_atomic(path, text):
     tmp = path.with_suffix(path.suffix + ".tmp")
     tmp.write_text(text, encoding="utf-8", newline="\n")
@@ -48,10 +62,10 @@ def write_atomic(path, text):
 
 
 class Handler(SimpleHTTPRequestHandler):
-    def send_text(self, status, message):
+    def send_text(self, status, message, content_type="text/plain"):
         body = message.encode("utf-8")
         self.send_response(status)
-        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Type", f"{content_type}; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
@@ -67,12 +81,29 @@ class Handler(SimpleHTTPRequestHandler):
         return any(p.startswith(".") for p in parts) or (parts and parts[0] in HIDDEN_TOP_LEVEL)
 
     def do_GET(self):
+        path = self.path.split("?", 1)[0]
+        captions = CAPTIONS_PATH.match(path)
         if self.is_hidden():
             self.send_text(HTTPStatus.NOT_FOUND, "Not found")
-        elif self.path.split("?", 1)[0] == "/api/status":
-            self.send_text(HTTPStatus.OK, json.dumps({"canSave": self.can_save()}))
+        elif path == "/api/status":
+            self.send_text(HTTPStatus.OK, json.dumps({"canSave": self.can_save()}), "application/json")
+        elif captions:
+            self.send_captions(captions.group(1))
         else:
             super().do_GET()
+
+    def send_captions(self, video_id):
+        """字幕只給這台電腦的編輯模式用；回傳 [{"words": [[秒, 字], ...]}, ...]"""
+        if not self.can_save():
+            self.send_text(HTTPStatus.FORBIDDEN, "字幕只在執行 server 的電腦上提供")
+            return
+        path = find_caption_file(video_id)
+        if path is None:
+            self.send_text(HTTPStatus.NOT_FOUND, "raw/ 裡沒有這支影片的字幕")
+            return
+        lines = [{"words": [[t, w] for t, w in line]} for line in split_lines(load_words(path))]
+        body = json.dumps({"file": path.name, "lines": lines}, ensure_ascii=False)
+        self.send_text(HTTPStatus.OK, body, "application/json")
 
     def do_HEAD(self):
         if self.is_hidden():

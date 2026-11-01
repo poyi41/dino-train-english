@@ -39,17 +39,20 @@
   <!-- 編輯單集 -->
   <div id="editor" hidden>
     <div class="video-bar">
-      <div class="video-bar-inner">
-        <div class="video-frame">
-          <div id="player"></div>
+      <div class="video-bar-inner edit-video-layout">
+        <div class="video-col">
+          <div class="video-frame">
+            <div id="player"></div>
+          </div>
+          <div class="video-tools">
+            <button type="button" data-seek="-5">⏪ 5s</button>
+            <button type="button" data-seek="-1">◀ 1s</button>
+            <span id="now" class="now">0:00.0</span>
+            <button type="button" data-seek="1">1s ▶</button>
+            <button type="button" data-seek="5">5s ⏩</button>
+          </div>
         </div>
-        <div class="video-tools">
-          <button type="button" data-seek="-5">⏪ 5s</button>
-          <button type="button" data-seek="-1">◀ 1s</button>
-          <span id="now" class="now">0:00.0</span>
-          <button type="button" data-seek="1">1s ▶</button>
-          <button type="button" data-seek="5">5s ⏩</button>
-        </div>
+        <aside id="captions" class="caption-panel" hidden></aside>
       </div>
     </div>
 

@@ -34,8 +34,8 @@ def load_words(path):
     return words
 
 
-def to_lines(words):
-    """依換行切成句子；每句結束時間取下一句第一個字的開始時間。"""
+def split_lines(words):
+    """依字幕換行分組：回傳 [[(開始秒, 文字), ...], ...]。tools/serve.py 也會用到。"""
     lines, current = [], []
     for t, text in words:
         if t is None:
@@ -46,7 +46,12 @@ def to_lines(words):
             current.append((t, text))
     if current:
         lines.append(current)
+    return lines
 
+
+def to_lines(words):
+    """依換行切成句子；每句結束時間取下一句第一個字的開始時間。"""
+    lines = split_lines(words)
     result = []
     for i, line in enumerate(lines):
         start = line[0][0]

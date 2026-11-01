@@ -656,3 +656,148 @@ body {
   font-size: 28px;
   text-decoration: none;
 }
+
+/* ---------- 編輯模式：字幕面板（在影片右邊） ---------- */
+
+.edit-video-layout {
+  display: flex;
+  gap: 12px;
+}
+
+.video-col {
+  flex: none;
+  width: min(100%, calc(30vh * 16 / 9));
+}
+
+.edit-video-layout .video-frame {
+  width: 100%;
+}
+
+.caption-panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  height: calc(30vh + 52px);
+  border-radius: 16px;
+  background: var(--card);
+  overflow: hidden;
+}
+
+.cap-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 4px 12px;
+}
+
+.cap-search {
+  flex: 1;
+  min-width: 0;
+  min-height: 36px;
+  font-size: 16px;
+}
+
+.cap-hint {
+  padding: 0 12px 6px;
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+.cap-list {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  border-top: 1px solid #eee;
+}
+
+.cap-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 4px 8px;
+  border-left: 4px solid transparent;
+  font-size: 16px;
+}
+
+.cap-line:hover {
+  background: #fafafa;
+}
+
+.cap-line.cap-current {
+  border-left-color: var(--orange);
+  background: #fff3e0;
+}
+
+.cap-line.cap-noise {
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+.cap-time {
+  flex: none;
+  padding: 2px 6px;
+  border: none;
+  border-radius: 6px;
+  background: #eef6ff;
+  color: #1565c0;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.cap-text {
+  flex: 1;
+  -webkit-user-select: text;
+  user-select: text;
+  cursor: text;
+}
+
+.cap-add {
+  flex: none;
+  padding: 2px 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.cap-line:hover .cap-add {
+  opacity: 1;
+}
+
+.cap-message {
+  padding: 12px;
+  color: var(--text-soft);
+}
+
+.edit-row.just-added {
+  outline: 3px solid var(--orange);
+}
+
+/* 窄螢幕：字幕放到影片下面 */
+@media (max-width: 900px) {
+  .edit-video-layout {
+    flex-direction: column;
+  }
+
+  .video-col {
+    margin: 0 auto;
+  }
+
+  .caption-panel {
+    height: 22vh;
+  }
+}
+
+.edit-video-layout .video-tools {
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.edit-video-layout .video-tools button {
+  padding: 4px 8px;
+  white-space: nowrap;
+}

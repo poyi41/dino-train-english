@@ -2,6 +2,7 @@ import { loadAllEpisodes, loadEpisode } from './data.js';
 import { createPlayer } from './player.js';
 import { speak } from './speech.js';
 import { el } from './dom.js';
+import { createCaptionPanel, loadCaptions } from './caption-panel.js';
 import {
   canWriteFiles,
   getProjectDir,
@@ -20,6 +21,7 @@ let isNew = false; // 新的一集，儲存時要加進 episodes.json
 let dirty = false;
 let saveMode = 'download'; // 'server' | 'folder' | 'download' | 'readonly'，見 project-files.js
 let player = null;
+let captions = null; // 字幕面板（只有用 tools/serve.py 時才有）
 
 const round1 = (n) => Math.round(n * 10) / 10;
 
@@ -197,6 +199,7 @@ function renderMeta() {
       ep.videoId = id;
       video.value = id;
       player?.changeVideo(id);
+      reloadCaptions();
     }
   });
 
@@ -482,9 +485,50 @@ async function showEditor() {
   document.querySelectorAll('[data-seek]').forEach((btn) => {
     btn.addEventListener('click', () => player.seekBy(Number(btn.dataset.seek)));
   });
+
+  // 字幕來自 tools/serve.py；用其他方式開網站時沒有這個面板
+  if (saveMode === 'server') {
+    captions = createCaptionPanel($('captions'), {
+      onSeek: (t) => player.playFrom(t),
+      onAdd: addSentenceFromCaption,
+      onReload: reloadCaptions,
+    });
+    $('captions').hidden = false;
+    reloadCaptions();
+  }
+
   setInterval(() => {
-    $('now').textContent = formatTime(player.getTime());
+    const t = player.getTime();
+    $('now').textContent = formatTime(t);
+    captions?.update(t);
   }, 200);
+}
+
+/* ---------- 字幕面板 ---------- */
+
+async function reloadCaptions() {
+  if (!captions) return;
+  try {
+    const data = await loadCaptions(ep.videoId);
+    if (data) {
+      captions.setCaptions(data);
+    } else {
+      captions.showMessage('raw/ 裡沒有這支影片的字幕。照 README「用字幕找句子和秒數」用 yt-dlp 抓好後，按 🔄 重新讀取。');
+    }
+  } catch (err) {
+    captions.showMessage(`字幕讀取失敗：${err.message}`);
+  }
+}
+
+function addSentenceFromCaption({ en, start, end }) {
+  ep.sentences.push({ en, zh: '', start, end });
+  markDirty();
+  renderSentences();
+  // 自動字幕沒有標點和中文，捲到新句子讓大人補上
+  const row = $('sentences').lastElementChild;
+  row.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  row.classList.add('just-added');
+  row.querySelectorAll('input')[1].focus({ preventScroll: true });
 }
 
 /* ---------- 進入點 ---------- */
