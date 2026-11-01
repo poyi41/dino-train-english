@@ -73,6 +73,11 @@ class Handler(SimpleHTTPRequestHandler):
     def can_save(self):
         return is_loopback(self.client_address[0])
 
+    def end_headers(self):
+        # 改了檔案重新整理就要看到新版，不讓瀏覽器用舊的快取
+        self.send_header("Cache-Control", "no-cache")
+        super().end_headers()
+
     # ---------- 讀取 ----------
 
     def is_hidden(self):

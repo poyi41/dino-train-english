@@ -26,10 +26,23 @@ export function isWatched(episodeId) {
   return getWatched().includes(episodeId);
 }
 
+// 回傳 true 表示這次才剛看完（第一次），用來決定要不要蓋印章
 export function markWatched(episodeId) {
   const watched = getWatched();
-  if (!watched.includes(episodeId)) {
-    watched.push(episodeId);
-    write('watched', watched);
-  }
+  if (watched.includes(episodeId)) return false;
+  watched.push(episodeId);
+  write('watched', watched);
+  return true;
+}
+
+// 每集累計播放的秒數：{ ep01: 312, ... }。分好幾次看也會累加
+export function getProgress() {
+  return read('progress', {});
+}
+
+export function addProgress(episodeId, seconds) {
+  const progress = getProgress();
+  progress[episodeId] = (progress[episodeId] ?? 0) + seconds;
+  write('progress', progress);
+  return progress[episodeId];
 }

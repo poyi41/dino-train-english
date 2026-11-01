@@ -24,6 +24,12 @@
     </h1>
     <p id="status" class="message">載入中…</p>
 
+    <!-- 看片進度：小火車開到終點就算看完 -->
+    <div id="watch-progress" class="watch-progress" hidden>
+      <div class="watch-track"><span id="watch-train" class="watch-train">🚂</span></div>
+      <span id="watch-goal" class="watch-goal">🏁</span>
+    </div>
+
     <section id="words-section" class="section" hidden>
       <h2 class="section-title">🔤 Words</h2>
       <div id="words" class="word-grid"></div>
@@ -33,6 +39,9 @@
       <h2 class="section-title">💬 Say it!</h2>
       <div id="sentences" class="sentence-list"></div>
     </section>
+
+    <!-- 例如在電視上看過時，大人可以手動標記 -->
+    <button type="button" id="adult-mark" class="adult-mark" hidden>大人用：標記這集已看完</button>
   </main>
 
   <script type="module" src="js/episode.js"></script>

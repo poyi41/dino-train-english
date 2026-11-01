@@ -104,6 +104,19 @@ export async function createPlayer(elementId, videoId) {
       player.playVideo();
     },
 
+    pause() {
+      endSegment();
+      player.pauseVideo();
+    },
+
+    isPlaying() {
+      return player.getPlayerState() === YT.PlayerState.PLAYING;
+    },
+
+    getDuration() {
+      return player.getDuration();
+    },
+
     // 以下給編輯模式用
     getTime() {
       return player.getCurrentTime();

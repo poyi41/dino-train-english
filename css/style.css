@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+/* 有設定 display 的元素也要能用 hidden 屬性隱藏 */
+[hidden] {
+  display: none !important;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -800,4 +805,346 @@ body {
 .edit-video-layout .video-tools button {
   padding: 4px 8px;
   white-space: nowrap;
+}
+
+/* ---------- 首頁：進度與入口 ---------- */
+
+.home-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.home-progress {
+  margin-right: auto;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.nav-dex {
+  background: var(--orange);
+}
+
+.home-link {
+  background: var(--orange);
+}
+
+.episode-card {
+  overflow: hidden;
+}
+
+.card-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 8px;
+  background: var(--orange);
+}
+
+/* ---------- 單集頁：看片進度小火車 ---------- */
+
+.watch-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.watch-track {
+  position: relative;
+  flex: 1;
+  height: 12px;
+  margin: 0 20px;
+  border-radius: 6px;
+  background: repeating-linear-gradient(90deg, #c8b89a 0 14px, transparent 14px 22px), #eee3cc;
+}
+
+.watch-train {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 36px;
+  transform: translate(-50%, -55%) scaleX(-1); /* 讓火車朝右開 */
+  transition: left 1s linear;
+}
+
+.watch-goal {
+  font-size: 36px;
+}
+
+.watch-progress.done .watch-track {
+  background: var(--green);
+}
+
+.adult-mark {
+  display: block;
+  margin: 48px auto 0;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  color: var(--text-soft);
+  font: inherit;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- 印章 ---------- */
+
+.stamp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  border: 6px solid #d84315;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 7px #d84315;
+}
+
+.stamp.empty {
+  border: 4px dashed #c8b89a;
+  background: transparent;
+  box-shadow: none;
+  color: #c8b89a;
+  font-size: 44px;
+  font-weight: 900;
+}
+
+.stamp-img {
+  width: 86%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.stamp-img.dino-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+}
+
+.stamp-number {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 8px;
+  border-radius: 8px;
+  background: #d84315;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.stamp-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.stamp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 520px);
+  padding: 28px 20px;
+  border-radius: var(--radius);
+  background: var(--bg);
+  text-align: center;
+}
+
+.stamp-title {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.stamp-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.stamp-card .stamp {
+  width: 200px;
+  height: 200px;
+}
+
+.stamp-press {
+  min-height: 96px;
+  padding: 16px 40px;
+  font-size: 36px;
+  background: #d84315;
+}
+
+.stamp-slam {
+  animation: slam 0.45s cubic-bezier(0.3, 1.6, 0.6, 1) both;
+}
+
+@keyframes slam {
+  from {
+    opacity: 0;
+    transform: scale(2.6) rotate(-25deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(0.92) rotate(-6deg);
+  }
+
+  to {
+    transform: scale(1) rotate(-8deg);
+  }
+}
+
+.stamp-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.stamp-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.stamp-close {
+  background: var(--sky);
+  color: var(--text);
+}
+
+/* 印章簿 */
+
+.stamp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.stamp-slot-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.stamp-slot-cell .stamp:not(.empty) {
+  transform: rotate(-8deg);
+}
+
+.stamp-label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ---------- 恐龍圖鑑 ---------- */
+
+.dex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.dex-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dex-card .en {
+  font-size: 24px;
+  word-break: break-word;
+}
+
+.dex-img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
+
+.dex-img.dino-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+
+/* 還沒解鎖：剪影 */
+.dex-card.locked {
+  background: #efe6d2;
+}
+
+.dex-card.locked .dex-img {
+  filter: brightness(0) opacity(0.35);
+}
+
+.dex-card.locked .en {
+  color: var(--text-soft);
+}
+
+.dex-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.dex-ep {
+  min-width: 44px;
+  min-height: 44px;
+  font-weight: 900;
+}
+
+.credits-link {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.credits-link a,
+.credits-page a {
+  color: var(--text-soft);
+}
+
+.credits-page {
+  font-size: 16px;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.credits-list li {
+  margin-bottom: 12px;
 }

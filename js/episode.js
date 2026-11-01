@@ -2,7 +2,11 @@ import { loadEpisode } from './data.js';
 import { createPlayer } from './player.js';
 import { speak } from './speech.js';
 import { el } from './dom.js';
+import { addProgress, getProgress, isWatched, markWatched } from './storage.js';
+import { loadDinosaurs, stampDinosaur } from './dinosaurs.js';
+import { showStampCeremony } from './stamp.js';
 
+const $ = (id) => document.getElementById(id);
 const statusEl = document.getElementById('status');
 
 function showError(text) {
@@ -109,6 +113,68 @@ async function init() {
 
   renderWords(ep.words ?? [], playerReady);
   renderSentences(ep.sentences ?? [], playerReady);
+  trackWatching(ep, playerReady);
+  setupAdultMark(ep, playerReady);
+}
+
+/* ---------- 看完判斷 ---------- */
+
+// 累計播放滿影片長度的 85% 就算看完。不看播放位置，因為點跟讀句會跳到後段、孩子也可能直接拉到最後
+const WATCHED_RATIO = 0.85;
+
+function showProgress(ratio, done) {
+  $('watch-progress').hidden = false;
+  $('watch-progress').classList.toggle('done', done);
+  $('watch-train').style.left = `${Math.min(ratio, 1) * 100}%`;
+  $('watch-goal').textContent = done ? '⭐' : '🏁';
+}
+
+async function completeEpisode(ep, playerReady) {
+  if (!markWatched(ep.id)) return;
+  showProgress(1, true);
+  (await playerReady)?.pause(); // 蓋印章時影片先停下來
+  const main = stampDinosaur(ep);
+  const dinos = await loadDinosaurs().catch(() => new Map());
+  showStampCeremony(ep, main && { ...main, ...dinos.get(main.en) });
+}
+
+function trackWatching(ep, playerReady) {
+  if (isWatched(ep.id)) showProgress(1, true);
+
+  playerReady.then((player) => {
+    if (!player) return;
+    let last = performance.now();
+    setInterval(() => {
+      const now = performance.now();
+      const elapsed = Math.min((now - last) / 1000, 5); // 分頁在背景時計時器會變慢，最多算 5 秒
+      last = now;
+      if (isWatched(ep.id) || !player.isPlaying()) return;
+      const duration = player.getDuration();
+      if (!duration) return;
+      const watchedSec = addProgress(ep.id, elapsed);
+      const ratio = watchedSec / (duration * WATCHED_RATIO);
+      showProgress(ratio, false);
+      if (ratio >= 1) completeEpisode(ep, playerReady);
+    }, 1000);
+  });
+
+  // 之前看過一部分：先顯示進度（影片長度還不知道，用 11 分鐘估）
+  const before = getProgress()[ep.id];
+  if (before && !isWatched(ep.id)) showProgress(before / (700 * WATCHED_RATIO), false);
+}
+
+// 大人手動標記（答一題加法，避免孩子自己按）
+function setupAdultMark(ep, playerReady) {
+  const btn = $('adult-mark');
+  btn.hidden = isWatched(ep.id);
+  btn.addEventListener('click', () => {
+    const a = 10 + Math.floor(Math.random() * 10);
+    const b = 10 + Math.floor(Math.random() * 10);
+    if (Number(prompt(`大人確認：${a} + ${b} = ?`)) === a + b) {
+      btn.hidden = true;
+      completeEpisode(ep, playerReady);
+    }
+  });
 }
 
 init();

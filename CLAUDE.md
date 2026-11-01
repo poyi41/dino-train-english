@@ -78,18 +78,27 @@
 
 ## 功能
 
-1. **首頁**：所有集數的大卡片列表，標示已看完的集數（localStorage）
+1. **首頁**：所有集數的大卡片列表，顯示「⭐ 已看完 / 總集數」，看完的卡片有 ⭐，看到一半有進度條
 2. **單集頁**：上方影片，下方單字卡與句子
    - 點單字 → 唸出發音
    - 點句子 → 影片跳到 `start` 播放，到 `end` 自動暫停（方便跟讀）
-3. **恐龍印章**：看完一集可以蓋一個恐龍印章
-4. **恐龍圖鑑頁**：收集所有集數出現過的恐龍名稱
+   - **看完判斷**：累計播放秒數（`dinoTrain.progress`，跨次累加）達影片長度 85% 就算看完。
+     不用播放位置判斷（跟讀句會跳到後段、孩子會拉進度條）。小火車進度條顯示進度
+   - 頁尾「大人用：標記這集已看完」（答一題加法）
+3. **恐龍印章**（`js/stamp.js`、`stamps.html`）：看完時跳出蓋章畫面，**孩子自己點**才蓋下去
+   （iPad 只允許點擊時發聲），印章是那集 `dinosaurs[0]`（主角恐龍）。印章簿每集一格
+4. **恐龍圖鑑**（`dex.html`）：`data/dinosaurs.json` 的每種恐龍一張卡，看過有牠出現的集數就解鎖；
+   沒解鎖顯示剪影（`filter: brightness(0)`，所以插圖最好是透明背景）
+   - 插圖在 `assets/dinosaurs/<名稱>.webp`，來自 Wikimedia Commons，**只用 CC0 / 公有領域 / CC BY / CC BY-SA**；
+     優先 TotalDino 的「<學名> TD.png」系列（風格一致、透明背景）。不可用節目角色圖
+   - 每張圖都要在 `data/dinosaurs.json` 的 `credit` 寫作者、授權、來源與修改備註，`credits.html` 會列出來
+   - 新恐龍出現在新集數時：把牠加進 `data/dinosaurs.json`（含插圖與 credit），否則圖鑑不會出現
 5. **編輯模式**（`edit.html`，大人用）：新增 / 編輯集數、句子、單字、恐龍
    - 首頁右上角淡色 ⚙️ 進入，需先答對一題乘法（記在 sessionStorage）
    - 存檔 `POST /api/episodes/<id>`（`tools/serve.py`），server 會自動把新集數加進 `episodes.json`
    - 安全限制：只接受 localhost 的存檔、檢查 Origin、只能寫 `data/episodes/epNN.json`；
      不提供 `.git`、`.claude`、`raw/`、`tools/` 等檔案。iPad 只能看、不能存
-   - 字幕面板（`js/caption-panel.js`）：顯示 `raw/<videoId>.en-orig.json3`，跟著影片標亮；
+   - 字幕面板（`js/caption-panel.js`）：顯示 `raw/<videoId>.en-orig.srv3`（沒有才用 json3），跟著影片標亮；
      選取文字按 ➕ 加成句子，秒數依逐字時間計算（開始 −0.3 秒、結束 +0.5 秒，與 `tools/captions_to_lines.py` 一致）
    - 沒用 `serve.py` 時的備案：File System Access API（電腦版 Edge / Chrome，要選資料夾）→ 下載 JSON
    - 存出的 JSON 固定欄位順序、陣列每筆一行（見 `formatEpisode()`），手動編輯時請保持同樣格式
