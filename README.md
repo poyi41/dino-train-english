@@ -4,30 +4,33 @@
 
 ## 啟動
 
-YouTube IFrame API 不能用 `file://` 開，必須透過本機 server：
+YouTube IFrame API 不能用 `file://` 開，必須透過本機 server。在專案資料夾執行：
 
 ```bash
-python -m http.server 8000
+python tools/serve.py
 ```
 
-電腦上開 <http://localhost:8000>。
+電腦上開 <http://localhost:8000>。使用期間這個視窗不要關，按 Ctrl+C 停止。
 
 ### 用平板看
 
-平板與電腦連同一個 Wi-Fi，電腦端改成：
+平板與電腦連同一個 Wi-Fi，啟動時畫面會印出「iPad（同一個 Wi-Fi）」的網址，在平板開那個網址。
+第一次啟動 Windows 可能會詢問防火牆，選「私人網路」允許即可。平板只能看，不能編輯存檔。
 
-```bash
-python -m http.server 8000 --bind 0.0.0.0
-```
+## 編輯模式（新增一集、改句子）
 
-在電腦查 IP（Windows：`ipconfig` 看「IPv4 位址」），平板開 `http://<電腦IP>:8000`。
-第一次啟動 Windows 可能會詢問防火牆，選「私人網路」允許即可。
+請在**執行 server 的那台電腦**上操作（任何瀏覽器都可以）：
 
-## 新增一集
+1. 首頁右上角淡色的 ⚙️ → 回答乘法題進入
+2. 點要改的集數；或在「新增一集」貼上 YouTube 網址
+3. 邊播影片邊整理：
+   - 句子：影片播到開頭按「開始」的 ⏱，講完按「結束」的 ⏱，再按 ▶ 試播；用 − / + 每次微調 0.1 秒
+   - 單字：🔊 聽發音、🎬 從出現的地方播放
+4. 按右下角 💾 儲存，直接寫回 `data/`
+5. 按 👀 打開孩子看到的畫面確認（已開著的頁面要重新整理）
 
-1. 在 YouTube 上確認影片可以嵌入播放，複製網址 `watch?v=` 後面的 11 碼影片 ID
-2. 複製 `data/episodes/ep01.json` 成新檔（如 `ep02.json`），填入內容（格式見 `CLAUDE.md`）
-3. 在 `data/episodes.json` 的 `episodes` 陣列加上 `"ep02"`
+如果是用 `python -m http.server` 啟動，存檔會改成要你選專案資料夾（只有 Edge / Chrome 支援），
+其他瀏覽器則會下載 JSON 讓你手動放進 `data/episodes/`。用 `tools/serve.py` 就沒有這些步驟。
 
 字幕原始檔請放在 `raw/`，該資料夾不會進 git，也不會被網站使用。
 

@@ -11,12 +11,14 @@
 
 ## 技術限制（必須遵守）
 
-- **純前端**：HTML + CSS + 原生 JavaScript。不用後端、不用資料庫、不用打包工具或框架
+- **前端為主**：HTML + CSS + 原生 JavaScript。不用資料庫、不用打包工具或框架。
+  唯一的後端是 `tools/serve.py`（只用 Python 內建模組），負責開網站與編輯模式存檔，
+  不要再加其他後端功能；孩子用的頁面不能依賴它的 API（用一般 `http.server` 也要能看）
 - **影片**：一律用 YouTube IFrame Player API 嵌入。**不下載、不轉存、不重新上傳影片**
 - **每集內容**：一集一個 JSON 檔，放在 `data/episodes/epXX.json`（兩位數，如 `ep01.json`）
 - **發音**：瀏覽器內建 Web Speech API（`speechSynthesis`，`lang = "en-US"`），不使用外部 TTS 服務
-- **執行方式**：用 local server 開啟（IFrame API 不能在 `file://` 下運作），例如：
-  `python -m http.server 8000` 然後開 `http://localhost:8000`
+- **執行方式**：`python tools/serve.py`，然後開 `http://localhost:8000`
+  （IFrame API 不能在 `file://` 下運作）。server 永遠服務它所在的專案資料夾，不管從哪裡執行
 - **字幕檔**：下載的字幕檔只當整理教材的原始資料，**不放進網站、不 commit 進 repo**
   （放在 `raw/` 並由 `.gitignore` 排除）
 - **進度儲存**：只用 `localStorage`，不收集、不傳送任何資料到外部
@@ -62,6 +64,13 @@
    - 點句子 → 影片跳到 `start` 播放，到 `end` 自動暫停（方便跟讀）
 3. **恐龍印章**：看完一集可以蓋一個恐龍印章
 4. **恐龍圖鑑頁**：收集所有集數出現過的恐龍名稱
+5. **編輯模式**（`edit.html`，大人用）：新增 / 編輯集數、句子、單字、恐龍
+   - 首頁右上角淡色 ⚙️ 進入，需先答對一題乘法（記在 sessionStorage）
+   - 存檔 `POST /api/episodes/<id>`（`tools/serve.py`），server 會自動把新集數加進 `episodes.json`
+   - 安全限制：只接受 localhost 的存檔、檢查 Origin、只能寫 `data/episodes/epNN.json`；
+     不提供 `.git`、`.claude`、`raw/`、`tools/` 等檔案。iPad 只能看、不能存
+   - 沒用 `serve.py` 時的備案：File System Access API（電腦版 Edge / Chrome，要選資料夾）→ 下載 JSON
+   - 存出的 JSON 固定欄位順序、陣列每筆一行（見 `formatEpisode()`），手動編輯時請保持同樣格式
 
 ## 程式慣例
 

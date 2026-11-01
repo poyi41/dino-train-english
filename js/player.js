@@ -103,5 +103,20 @@ export async function createPlayer(elementId, videoId) {
       player.seekTo(time, true);
       player.playVideo();
     },
+
+    // 以下給編輯模式用
+    getTime() {
+      return player.getCurrentTime();
+    },
+
+    seekBy(seconds) {
+      endSegment();
+      player.seekTo(Math.max(0, player.getCurrentTime() + seconds), true);
+    },
+
+    changeVideo(newVideoId) {
+      endSegment();
+      player.cueVideoById(newVideoId);
+    },
   };
 }

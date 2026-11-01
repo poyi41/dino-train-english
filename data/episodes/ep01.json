@@ -21,13 +21,12 @@
     { "en": "fish", "zh": "魚", "time": 651.5, "emoji": "🐟" }
   ],
   "sentences": [
-    { "en": "All aboard!", "zh": "大家上車！", "start": 131.0, "end": 133.4 },
+    { "en": "All aboard!", "zh": "大家上車！", "start": 131, "end": 133.4 },
     { "en": "Tickets, please!", "zh": "請出示車票！", "start": 155.5, "end": 157.8 },
     { "en": "It's a Time Tunnel!", "zh": "是時光隧道！", "start": 234.4, "end": 236.5 },
     { "en": "Are we there yet?", "zh": "我們到了嗎？", "start": 291.1, "end": 292.7 },
     { "en": "That's a lot of horns!", "zh": "好多角喔！", "start": 330.5, "end": 333.8 },
     { "en": "It's hatching!", "zh": "要孵出來了！", "start": 499.6, "end": 502.3 },
-    { "en": "I love you, Mom.", "zh": "媽媽，我愛妳。", "start": 601.7, "end": 604.0 },
-    { "en": "I love fish!", "zh": "我愛吃魚！", "start": 652.8, "end": 655.3 }
+    { "en": "I love you, Mom.", "zh": "媽媽，我愛妳。", "start": 601.7, "end": 604 }
   ]
 }

@@ -327,3 +327,332 @@ body {
     transform: scale(1.12);
   }
 }
+
+/* ---------- 編輯模式（大人用，字可以小一點） ---------- */
+
+.edit-mode {
+  font-size: 18px;
+}
+
+.edit-mode input {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.edit-mode h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+}
+
+.hint {
+  color: var(--text-soft);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.small-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  border-color: var(--green);
+}
+
+.small-btn:active {
+  transform: translateY(1px);
+}
+
+.field {
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+}
+
+.field:focus {
+  border-color: var(--green);
+  outline: none;
+}
+
+.field.narrow {
+  width: 90px;
+}
+
+.field.time {
+  width: 90px;
+}
+
+.field.emoji-field {
+  width: 64px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.field.en-field {
+  font-weight: 700;
+}
+
+/* 門檻 */
+
+.gate {
+  text-align: center;
+}
+
+.gate-question {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.gate-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.gate-form input {
+  width: 140px;
+  padding: 8px;
+  border: 3px solid #ddd;
+  border-radius: 16px;
+  font: inherit;
+  font-size: 32px;
+  text-align: center;
+}
+
+.home-link {
+  margin-top: 24px;
+  background: var(--orange);
+}
+
+/* 集數列表 */
+
+.picker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.picker-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+}
+
+.picker-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--sky);
+  font-weight: 900;
+}
+
+.picker-title {
+  flex: 1;
+  font-weight: 700;
+}
+
+.picker-count {
+  color: var(--text-soft);
+}
+
+.new-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.new-form input {
+  flex: 1;
+  min-width: 260px;
+  min-height: 64px;
+  padding: 8px 16px;
+  border: 2px solid #ddd;
+  border-radius: 16px;
+  font: inherit;
+}
+
+/* 影片下方的跳轉工具 */
+
+.video-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.video-tools button {
+  min-height: 40px;
+  padding: 4px 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.now {
+  min-width: 90px;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.edit-mode .video-frame {
+  width: min(100%, calc(30vh * 16 / 9));
+}
+
+/* 編輯列 */
+
+.edit-section {
+  margin-top: 32px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.edit-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.row-texts {
+  display: flex;
+  flex: 1 1 320px;
+  gap: 8px;
+}
+
+.row-texts .field:not(.emoji-field) {
+  flex: 1;
+  min-width: 0;
+}
+
+.row-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.time-field {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.time-label {
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.add-btn {
+  width: 100%;
+  border-style: dashed;
+}
+
+/* 底部存檔列 */
+
+.edit-mode #editor .page {
+  padding-bottom: 120px;
+}
+
+.save-bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 10px 16px;
+  background: var(--card);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.save-status {
+  flex: 1;
+  color: var(--text-soft);
+}
+
+.save-status.unsaved {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.save-status.saved {
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.save-status.error {
+  color: #c62828;
+}
+
+/* 首頁右上角的齒輪：小、淡，孩子不容易注意到 */
+
+.settings-link {
+  opacity: 0.35;
+  font-size: 28px;
+  text-decoration: none;
+}
