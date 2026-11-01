@@ -1,0 +1,7 @@
+# 字幕等原始素材，只用來整理教材，不進 repo
+raw/
+*.srt
+*.vtt
+
+.DS_Store
+Thumbs.db

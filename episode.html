@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>恐龍火車學英文</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="video-bar">
+    <div class="video-bar-inner">
+      <a class="big-btn home-btn" href="index.html" aria-label="回首頁">🏠</a>
+      <div class="video-frame">
+        <div id="player"></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <h1 class="episode-title">
+      <span id="ep-title-en" class="en"></span>
+      <span id="ep-title-zh" class="zh"></span>
+    </h1>
+    <p id="status" class="message">載入中…</p>
+
+    <section id="words-section" class="section" hidden>
+      <h2 class="section-title">🔤 Words</h2>
+      <div id="words" class="word-grid"></div>
+    </section>
+
+    <section id="sentences-section" class="section" hidden>
+      <h2 class="section-title">💬 Say it!</h2>
+      <div id="sentences" class="sentence-list"></div>
+    </section>
+  </main>
+
+  <script type="module" src="js/episode.js"></script>
+</body>
+</html>
