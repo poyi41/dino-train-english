@@ -9,21 +9,28 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "stick", "zh": "樹枝", "time": 8.7, "emoji": "🪵" },
-    { "en": "foot", "zh": "腳", "time": 23.2, "emoji": "🦶" },
-    { "en": "tooth", "zh": "牙齒", "time": 43.5, "emoji": "🦷" },
-    { "en": "mouth", "zh": "嘴巴", "time": 47.7, "emoji": "👄" },
-    { "en": "smile", "zh": "微笑", "time": 65.1, "emoji": "😊" },
-    { "en": "two", "zh": "二", "time": 295.2, "emoji": "2️⃣" },
-    { "en": "breakfast", "zh": "早餐", "time": 406.4, "emoji": "🍳" }
+    { "en": "stick", "zh": "樹枝", "time": 8.7, "emoji": "🪵", "core": true },
+    { "en": "foot", "zh": "腳", "time": 23.2, "emoji": "🦶", "core": false },
+    { "en": "tooth", "zh": "牙齒", "time": 43.5, "emoji": "🦷", "core": true },
+    { "en": "mouth", "zh": "嘴巴", "time": 47.7, "emoji": "👄", "core": true },
+    { "en": "smile", "zh": "微笑", "time": 65.1, "emoji": "😊", "core": true },
+    { "en": "two", "zh": "二", "time": 295.2, "emoji": "2️⃣", "core": false },
+    { "en": "breakfast", "zh": "早餐", "time": 406.4, "emoji": "🍳", "core": false }
   ],
   "sentences": [
-    { "en": "My tooth came out!", "zh": "我的牙齒掉了！", "start": 44, "end": 46.1 },
-    { "en": "Can I hold it?", "zh": "我可以拿拿看嗎？", "start": 58.3, "end": 60 },
-    { "en": "Can I come too?", "zh": "我也可以去嗎？", "start": 104.4, "end": 106.7 },
-    { "en": "I love the flowers here.", "zh": "我喜歡這裡的花。", "start": 221.5, "end": 223.9 },
-    { "en": "Are you hungry?", "zh": "你們肚子餓嗎？", "start": 385.1, "end": 387.3 },
-    { "en": "I feel so much better now.", "zh": "我現在好多了。", "start": 532.1, "end": 535.3 },
-    { "en": "See you again soon!", "zh": "下次見！", "start": 535.8, "end": 538.2 }
+    { "en": "My tooth came out!", "zh": "我的牙齒掉了！", "start": 44, "end": 46.1, "core": true },
+    { "en": "Can I hold it?", "zh": "我可以拿拿看嗎？", "start": 58.3, "end": 60, "core": false },
+    { "en": "Can I come too?", "zh": "我也可以去嗎？", "start": 104.4, "end": 106.7, "core": true },
+    { "en": "I love the flowers here.", "zh": "我喜歡這裡的花。", "start": 221.5, "end": 223.9, "core": false },
+    { "en": "Are you hungry?", "zh": "你們肚子餓嗎？", "start": 385.1, "end": 387.3, "core": true },
+    { "en": "I feel so much better now.", "zh": "我現在好多了。", "start": 532.1, "end": 535.3, "core": false },
+    { "en": "See you again soon!", "zh": "下次見！", "start": 535.8, "end": 538.2, "core": false }
+  ],
+  "story": [
+    { "en": "Buddy's tooth comes out.", "zh": "Buddy 的牙齒掉了。" },
+    { "en": "Buddy is a little sad.", "zh": "Buddy 有一點難過。" },
+    { "en": "They go to see Annie and her mom.", "zh": "他們去找 Annie 和她媽媽。" },
+    { "en": "A T. rex can lose a tooth.", "zh": "暴龍會掉牙齒。" },
+    { "en": "A new tooth will grow in!", "zh": "新的牙齒會長出來！" }
   ]
 }

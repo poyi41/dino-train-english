@@ -11,21 +11,28 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "big", "zh": "大的", "time": 11.6, "emoji": "🐘" },
-    { "en": "small", "zh": "小的", "time": 38.9, "emoji": "🐭" },
-    { "en": "red", "zh": "紅色", "time": 104.8, "emoji": "🔴" },
-    { "en": "five", "zh": "五", "time": 166.3, "emoji": "5️⃣" },
-    { "en": "legs", "zh": "腿", "time": 377.2, "emoji": "🦵" },
-    { "en": "neck", "zh": "脖子", "time": 417.2, "emoji": "🦒" },
-    { "en": "plants", "zh": "植物", "time": 444, "emoji": "🌿" }
+    { "en": "big", "zh": "大的", "time": 11.6, "emoji": "🐘", "core": true },
+    { "en": "small", "zh": "小的", "time": 38.9, "emoji": "🐭", "core": true },
+    { "en": "red", "zh": "紅色", "time": 104.8, "emoji": "🔴", "core": false },
+    { "en": "five", "zh": "五", "time": 166.3, "emoji": "5️⃣", "core": true },
+    { "en": "legs", "zh": "腿", "time": 377.2, "emoji": "🦵", "core": false },
+    { "en": "neck", "zh": "脖子", "time": 417.2, "emoji": "🦒", "core": false },
+    { "en": "plants", "zh": "植物", "time": 444, "emoji": "🌿", "core": true }
   ],
   "sentences": [
-    { "en": "Let's play a game!", "zh": "我們來玩遊戲！", "start": 157.1, "end": 159.4 },
-    { "en": "Watch out!", "zh": "小心！", "start": 307.9, "end": 310.1 },
-    { "en": "Ready, set, go!", "zh": "預備，開始！", "start": 323.9, "end": 327.8 },
-    { "en": "I am so tired.", "zh": "我好累喔。", "start": 385.4, "end": 389.5 },
-    { "en": "Hi, Mom!", "zh": "嗨，媽媽！", "start": 554.6, "end": 556.7 },
-    { "en": "Thanks for the ride!", "zh": "謝謝你載我們！", "start": 586, "end": 588 },
-    { "en": "I'm still growing!", "zh": "我還在長大喔！", "start": 613, "end": 615.3 }
+    { "en": "Let's play a game!", "zh": "我們來玩遊戲！", "start": 157.1, "end": 159.4, "core": false },
+    { "en": "Watch out!", "zh": "小心！", "start": 307.9, "end": 310.1, "core": true },
+    { "en": "Ready, set, go!", "zh": "預備，開始！", "start": 323.9, "end": 327.8, "core": true },
+    { "en": "I am so tired.", "zh": "我好累喔。", "start": 385.4, "end": 389.5, "core": false },
+    { "en": "Hi, Mom!", "zh": "嗨，媽媽！", "start": 554.6, "end": 556.7, "core": true },
+    { "en": "Thanks for the ride!", "zh": "謝謝你載我們！", "start": 586, "end": 588, "core": false },
+    { "en": "I'm still growing!", "zh": "我還在長大喔！", "start": 613, "end": 615.3, "core": false }
+  ],
+  "story": [
+    { "en": "Tiny is small.", "zh": "Tiny 很小。" },
+    { "en": "Ernie is very, very big.", "zh": "Ernie 非常非常大。" },
+    { "en": "Ernie can eat a lot of plants.", "zh": "Ernie 可以吃好多植物。" },
+    { "en": "Tiny can fit in small places.", "zh": "Tiny 可以鑽進小小的地方。" },
+    { "en": "Big or small, we are all good!", "zh": "不管大還是小，我們都很棒！" }
   ]
 }

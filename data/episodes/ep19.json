@@ -10,20 +10,27 @@
     { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "ticket", "zh": "車票", "time": 26.8, "emoji": "🎟️" },
-    { "en": "quiet", "zh": "安靜的", "time": 376.7, "emoji": "🤫" },
-    { "en": "art", "zh": "藝術作品", "time": 428.7, "emoji": "🎨" },
-    { "en": "branch", "zh": "樹枝", "time": 449, "emoji": "🌿" },
-    { "en": "lizard", "zh": "蜥蜴", "time": 558.6, "emoji": "🦎" },
-    { "en": "family", "zh": "家人", "time": 167.6, "emoji": "👨‍👩‍👧" }
+    { "en": "ticket", "zh": "車票", "time": 26.8, "emoji": "🎟️", "core": true },
+    { "en": "quiet", "zh": "安靜的", "time": 376.7, "emoji": "🤫", "core": true },
+    { "en": "art", "zh": "藝術作品", "time": 428.7, "emoji": "🎨", "core": true },
+    { "en": "branch", "zh": "樹枝", "time": 449, "emoji": "🌿", "core": false },
+    { "en": "lizard", "zh": "蜥蜴", "time": 558.6, "emoji": "🦎", "core": false },
+    { "en": "family", "zh": "家人", "time": 167.6, "emoji": "👨‍👩‍👧", "core": true }
   ],
   "sentences": [
-    { "en": "See you soon!", "zh": "待會見！", "start": 77.5, "end": 78.8 },
-    { "en": "Are you scared?", "zh": "你會怕嗎？", "start": 297.4, "end": 298.7 },
-    { "en": "Way to go, Derek!", "zh": "Derek，好厲害！", "start": 358.1, "end": 360.4 },
-    { "en": "Take a look!", "zh": "你們看看！", "start": 434.7, "end": 438.6 },
-    { "en": "Thanks, Dad!", "zh": "謝謝爸爸！", "start": 570.6, "end": 572.2 },
-    { "en": "I'm proud of you, Derek.", "zh": "Derek，我以你為榮。", "start": 573.3, "end": 577.1 },
-    { "en": "I like it!", "zh": "我喜歡！", "start": 605.7, "end": 609.8 }
+    { "en": "See you soon!", "zh": "待會見！", "start": 77.5, "end": 78.8, "core": false },
+    { "en": "Are you scared?", "zh": "你會怕嗎？", "start": 297.4, "end": 298.7, "core": false },
+    { "en": "Way to go, Derek!", "zh": "Derek，好厲害！", "start": 358.1, "end": 360.4, "core": false },
+    { "en": "Take a look!", "zh": "你們看看！", "start": 434.7, "end": 438.6, "core": true },
+    { "en": "Thanks, Dad!", "zh": "謝謝爸爸！", "start": 570.6, "end": 572.2, "core": true },
+    { "en": "I'm proud of you, Derek.", "zh": "Derek，我以你為榮。", "start": 573.3, "end": 577.1, "core": false },
+    { "en": "I like it!", "zh": "我喜歡！", "start": 605.7, "end": 609.8, "core": true }
+  ],
+  "story": [
+    { "en": "Derek is a Deinonychus.", "zh": "Derek 是一隻恐爪龍。" },
+    { "en": "Derek has a big claw.", "zh": "Derek 有一隻大大的爪子。" },
+    { "en": "Derek can make art with his claw.", "zh": "Derek 會用爪子做藝術作品。" },
+    { "en": "They make an art show for Derek.", "zh": "他們幫 Derek 辦了一場作品展。" },
+    { "en": "Derek's mom and dad are proud.", "zh": "Derek 的爸爸媽媽很驕傲。" }
   ]
 }

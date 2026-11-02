@@ -10,20 +10,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "snack", "zh": "點心", "time": 95.3, "emoji": "🍪" },
-    { "en": "hide", "zh": "躲起來", "time": 208, "emoji": "🙈" },
-    { "en": "five", "zh": "五", "time": 216.8, "emoji": "5️⃣" },
-    { "en": "sky", "zh": "天空", "time": 347, "emoji": "☁️" },
-    { "en": "leaves", "zh": "葉子", "time": 362, "emoji": "🍃" },
-    { "en": "king", "zh": "國王", "time": 590.5, "emoji": "👑" }
+    { "en": "snack", "zh": "點心", "time": 95.3, "emoji": "🍪", "core": true },
+    { "en": "hide", "zh": "躲起來", "time": 208, "emoji": "🙈", "core": true },
+    { "en": "five", "zh": "五", "time": 216.8, "emoji": "5️⃣", "core": true },
+    { "en": "sky", "zh": "天空", "time": 347, "emoji": "☁️", "core": false },
+    { "en": "leaves", "zh": "葉子", "time": 362, "emoji": "🍃", "core": true },
+    { "en": "king", "zh": "國王", "time": 590.5, "emoji": "👑", "core": false }
   ],
   "sentences": [
-    { "en": "I can't wait to see Tank!", "zh": "我好想快點見到 Tank！", "start": 90.5, "end": 92.5 },
-    { "en": "Let's play hide-and-seek!", "zh": "我們來玩捉迷藏！", "start": 207.9, "end": 210.9 },
-    { "en": "Ready or not, here I come!", "zh": "準備好了沒，我來囉！", "start": 218.5, "end": 222.9 },
-    { "en": "You got me!", "zh": "被你找到了！", "start": 223.7, "end": 226 },
-    { "en": "Found you!", "zh": "找到你了！", "start": 235.6, "end": 237.7 },
-    { "en": "A little help, please! I'm stuck!", "zh": "幫幫我！我卡住了！", "start": 250.5, "end": 255.3 },
-    { "en": "Let's play again soon!", "zh": "下次再一起玩！", "start": 612.3, "end": 615.1 }
+    { "en": "I can't wait to see Tank!", "zh": "我好想快點見到 Tank！", "start": 90.5, "end": 92.5, "core": false },
+    { "en": "Let's play hide-and-seek!", "zh": "我們來玩捉迷藏！", "start": 207.9, "end": 210.9, "core": true },
+    { "en": "Ready or not, here I come!", "zh": "準備好了沒，我來囉！", "start": 218.5, "end": 222.9, "core": false },
+    { "en": "You got me!", "zh": "被你找到了！", "start": 223.7, "end": 226, "core": true },
+    { "en": "Found you!", "zh": "找到你了！", "start": 235.6, "end": 237.7, "core": true },
+    { "en": "A little help, please! I'm stuck!", "zh": "幫幫我！我卡住了！", "start": 250.5, "end": 255.3, "core": false },
+    { "en": "Let's play again soon!", "zh": "下次再一起玩！", "start": 612.3, "end": 615.1, "core": false }
+  ],
+  "story": [
+    { "en": "Tank is a Triceratops.", "zh": "Tank 是一隻三角龍。" },
+    { "en": "Tank has a big frill.", "zh": "Tank 有一個大大的頸盾。" },
+    { "en": "They play hide-and-seek at the pond.", "zh": "他們在池塘邊玩捉迷藏。" },
+    { "en": "Tank can not hide his big frill!", "zh": "Tank 的大頸盾藏不起來！" },
+    { "en": "The frill makes Tank look big.", "zh": "頸盾讓 Tank 看起來很大。" }
   ]
 }

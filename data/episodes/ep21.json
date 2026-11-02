@@ -9,21 +9,28 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "doll", "zh": "娃娃", "time": 12.2, "emoji": "🪆" },
-    { "en": "night", "zh": "晚上", "time": 85.4, "emoji": "🌙" },
-    { "en": "moon", "zh": "月亮", "time": 115.4, "emoji": "🌕" },
-    { "en": "frog", "zh": "青蛙", "time": 520, "emoji": "🐸" },
-    { "en": "tongue", "zh": "舌頭", "time": 529.6, "emoji": "👅" },
-    { "en": "snakes", "zh": "蛇", "time": 618.8, "emoji": "🐍" },
-    { "en": "turtles", "zh": "烏龜", "time": 619.8, "emoji": "🐢" }
+    { "en": "doll", "zh": "娃娃", "time": 12.2, "emoji": "🪆", "core": false },
+    { "en": "night", "zh": "晚上", "time": 85.4, "emoji": "🌙", "core": true },
+    { "en": "moon", "zh": "月亮", "time": 115.4, "emoji": "🌕", "core": true },
+    { "en": "frog", "zh": "青蛙", "time": 520, "emoji": "🐸", "core": true },
+    { "en": "tongue", "zh": "舌頭", "time": 529.6, "emoji": "👅", "core": true },
+    { "en": "snakes", "zh": "蛇", "time": 618.8, "emoji": "🐍", "core": false },
+    { "en": "turtles", "zh": "烏龜", "time": 619.8, "emoji": "🐢", "core": false }
   ],
   "sentences": [
-    { "en": "I can't believe it!", "zh": "真不敢相信！", "start": 5.4, "end": 7.4 },
-    { "en": "Are you okay?", "zh": "你還好嗎？", "start": 43.3, "end": 45.3 },
-    { "en": "Let's get to work!", "zh": "我們開始動手吧！", "start": 188.7, "end": 190.8 },
-    { "en": "Tell us the story!", "zh": "講故事給我們聽！", "start": 294.4, "end": 296.3 },
-    { "en": "Look at all those stars!", "zh": "你看那些星星！", "start": 405.7, "end": 408.4 },
-    { "en": "I'm not scared.", "zh": "我不害怕。", "start": 410.2, "end": 412.1 },
-    { "en": "Good night!", "zh": "晚安！", "start": 602.7, "end": 604.5 }
+    { "en": "I can't believe it!", "zh": "真不敢相信！", "start": 5.4, "end": 7.4, "core": false },
+    { "en": "Are you okay?", "zh": "你還好嗎？", "start": 43.3, "end": 45.3, "core": true },
+    { "en": "Let's get to work!", "zh": "我們開始動手吧！", "start": 188.7, "end": 190.8, "core": false },
+    { "en": "Tell us the story!", "zh": "講故事給我們聽！", "start": 294.4, "end": 296.3, "core": false },
+    { "en": "Look at all those stars!", "zh": "你看那些星星！", "start": 405.7, "end": 408.4, "core": false },
+    { "en": "I'm not scared.", "zh": "我不害怕。", "start": 410.2, "end": 412.1, "core": true },
+    { "en": "Good night!", "zh": "晚安！", "start": 602.7, "end": 604.5, "core": true }
+  ],
+  "story": [
+    { "en": "The family camps at the big pond.", "zh": "全家到大池塘露營。" },
+    { "en": "They make a big nest.", "zh": "他們做了一個大大的巢。" },
+    { "en": "At night, they hear a big sound.", "zh": "晚上，他們聽到很大的聲音。" },
+    { "en": "Is it a monster?", "zh": "是怪獸嗎？" },
+    { "en": "No, it is a little frog!", "zh": "不是，是一隻小青蛙！" }
   ]
 }

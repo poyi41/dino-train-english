@@ -8,20 +8,27 @@
     { "en": "Pteranodon", "zh": "無齒翼龍", "emoji": "🦅" }
   ],
   "words": [
-    { "en": "hands", "zh": "手", "time": 35.4, "emoji": "✋" },
-    { "en": "fingers", "zh": "手指", "time": 36.1, "emoji": "🖐️" },
-    { "en": "sea", "zh": "海", "time": 135.4, "emoji": "🌊" },
-    { "en": "berries", "zh": "莓果", "time": 222.6, "emoji": "🫐" },
-    { "en": "sister", "zh": "姊妹", "time": 607.6, "emoji": "👧" },
-    { "en": "friend", "zh": "朋友", "time": 604.1, "emoji": "🧑‍🤝‍🧑" }
+    { "en": "hands", "zh": "手", "time": 35.4, "emoji": "✋", "core": true },
+    { "en": "fingers", "zh": "手指", "time": 36.1, "emoji": "🖐️", "core": false },
+    { "en": "sea", "zh": "海", "time": 135.4, "emoji": "🌊", "core": true },
+    { "en": "berries", "zh": "莓果", "time": 222.6, "emoji": "🫐", "core": false },
+    { "en": "sister", "zh": "姊妹", "time": 607.6, "emoji": "👧", "core": true },
+    { "en": "friend", "zh": "朋友", "time": 604.1, "emoji": "🧑‍🤝‍🧑", "core": true }
   ],
   "sentences": [
-    { "en": "So good to see you!", "zh": "真高興見到你！", "start": 127, "end": 128.9 },
-    { "en": "I love it!", "zh": "我好喜歡！", "start": 136.8, "end": 138.6 },
-    { "en": "I count to five.", "zh": "我數到五。", "start": 182.4, "end": 184 },
-    { "en": "I can smell Tiny!", "zh": "我聞到 Tiny 的味道！", "start": 407.6, "end": 410.3 },
-    { "en": "I'm sorry.", "zh": "對不起。", "start": 501.4, "end": 503.3 },
-    { "en": "There you are!", "zh": "原來你在這裡！", "start": 526, "end": 527.5 },
-    { "en": "You're my best friend too.", "zh": "你也是我最好的朋友。", "start": 613.4, "end": 615.9 }
+    { "en": "So good to see you!", "zh": "真高興見到你！", "start": 127, "end": 128.9, "core": false },
+    { "en": "I love it!", "zh": "我好喜歡！", "start": 136.8, "end": 138.6, "core": true },
+    { "en": "I count to five.", "zh": "我數到五。", "start": 182.4, "end": 184, "core": false },
+    { "en": "I can smell Tiny!", "zh": "我聞到 Tiny 的味道！", "start": 407.6, "end": 410.3, "core": false },
+    { "en": "I'm sorry.", "zh": "對不起。", "start": 501.4, "end": 503.3, "core": true },
+    { "en": "There you are!", "zh": "原來你在這裡！", "start": 526, "end": 527.5, "core": true },
+    { "en": "You're my best friend too.", "zh": "你也是我最好的朋友。", "start": 613.4, "end": 615.9, "core": false }
+  ],
+  "story": [
+    { "en": "Annie comes to play.", "zh": "Annie 來玩了。" },
+    { "en": "Buddy and Annie are both T. rex.", "zh": "Buddy 和 Annie 都是暴龍。" },
+    { "en": "Tiny is sad, so she flies away.", "zh": "Tiny 很難過，就飛走了。" },
+    { "en": "Buddy can smell Tiny and find her.", "zh": "Buddy 聞得到 Tiny，找到了她。" },
+    { "en": "Tiny is Buddy's best friend.", "zh": "Tiny 是 Buddy 最好的朋友。" }
   ]
 }

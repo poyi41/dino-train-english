@@ -11,20 +11,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "north", "zh": "北方", "time": 177, "emoji": "🧭" },
-    { "en": "spring", "zh": "春天", "time": 259.6, "emoji": "🌸" },
-    { "en": "four", "zh": "四", "time": 320, "emoji": "4️⃣" },
-    { "en": "trees", "zh": "樹", "time": 266.4, "emoji": "🌳" },
-    { "en": "vacation", "zh": "假期", "time": 606.5, "emoji": "🧳" },
-    { "en": "summer", "zh": "夏天", "time": 650.7, "emoji": "🏖️" }
+    { "en": "north", "zh": "北方", "time": 177, "emoji": "🧭", "core": true },
+    { "en": "spring", "zh": "春天", "time": 259.6, "emoji": "🌸", "core": true },
+    { "en": "four", "zh": "四", "time": 320, "emoji": "4️⃣", "core": true },
+    { "en": "trees", "zh": "樹", "time": 266.4, "emoji": "🌳", "core": true },
+    { "en": "vacation", "zh": "假期", "time": 606.5, "emoji": "🧳", "core": false },
+    { "en": "summer", "zh": "夏天", "time": 650.7, "emoji": "🏖️", "core": false }
   ],
   "sentences": [
-    { "en": "Can you guess where we're going?", "zh": "你猜得到我們要去哪裡嗎？", "start": 18.7, "end": 21.1 },
-    { "en": "We love mysteries!", "zh": "我們最愛解謎了！", "start": 136.3, "end": 138.9 },
-    { "en": "All aboard!", "zh": "大家上車！", "start": 229.6, "end": 232 },
-    { "en": "Come on, Tiny! Let's look around.", "zh": "Tiny 快來！我們到處看看。", "start": 298.4, "end": 301 },
-    { "en": "What a great view!", "zh": "風景好棒！", "start": 383.5, "end": 386.1 },
-    { "en": "I see him!", "zh": "我看到他了！", "start": 432.2, "end": 433.8 },
-    { "en": "Hey, Dad!", "zh": "嗨，爸爸！", "start": 533.4, "end": 535.5 }
+    { "en": "Can you guess where we're going?", "zh": "你猜得到我們要去哪裡嗎？", "start": 18.7, "end": 21.1, "core": false },
+    { "en": "We love mysteries!", "zh": "我們最愛解謎了！", "start": 136.3, "end": 138.9, "core": false },
+    { "en": "All aboard!", "zh": "大家上車！", "start": 229.6, "end": 232, "core": true },
+    { "en": "Come on, Tiny! Let's look around.", "zh": "Tiny 快來！我們到處看看。", "start": 298.4, "end": 301, "core": false },
+    { "en": "What a great view!", "zh": "風景好棒！", "start": 383.5, "end": 386.1, "core": false },
+    { "en": "I see him!", "zh": "我看到他了！", "start": 432.2, "end": 433.8, "core": true },
+    { "en": "Hey, Dad!", "zh": "嗨，爸爸！", "start": 533.4, "end": 535.5, "core": true }
+  ],
+  "story": [
+    { "en": "They go to see Annie.", "zh": "他們去找 Annie。" },
+    { "en": "But Annie is not at home.", "zh": "可是 Annie 不在家。" },
+    { "en": "They see big tracks.", "zh": "他們看到大大的腳印。" },
+    { "en": "The T. rex family went north.", "zh": "暴龍一家往北走了。" },
+    { "en": "They find Annie. Hooray!", "zh": "他們找到 Annie 了。好耶！" }
   ]
 }

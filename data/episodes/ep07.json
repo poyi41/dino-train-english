@@ -10,20 +10,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "orange", "zh": "橘色", "time": 38.9, "emoji": "🟠" },
-    { "en": "blue", "zh": "藍色", "time": 39.6, "emoji": "🔵" },
-    { "en": "nose", "zh": "鼻子", "time": 144.7, "emoji": "👃" },
-    { "en": "ten", "zh": "十", "time": 308.7, "emoji": "🔟" },
-    { "en": "meat", "zh": "肉", "time": 78.8, "emoji": "🍖" },
-    { "en": "arms", "zh": "手臂", "time": 222.8, "emoji": "💪" }
+    { "en": "orange", "zh": "橘色", "time": 38.9, "emoji": "🟠", "core": true },
+    { "en": "blue", "zh": "藍色", "time": 39.6, "emoji": "🔵", "core": false },
+    { "en": "nose", "zh": "鼻子", "time": 144.7, "emoji": "👃", "core": true },
+    { "en": "ten", "zh": "十", "time": 308.7, "emoji": "🔟", "core": false },
+    { "en": "meat", "zh": "肉", "time": 78.8, "emoji": "🍖", "core": true },
+    { "en": "arms", "zh": "手臂", "time": 222.8, "emoji": "💪", "core": true }
   ],
   "sentences": [
-    { "en": "Have fun!", "zh": "玩得開心！", "start": 11.9, "end": 13.2 },
-    { "en": "I'm getting hungry.", "zh": "我肚子餓了。", "start": 83.8, "end": 86.1 },
-    { "en": "I love adventures!", "zh": "我愛冒險！", "start": 99.2, "end": 101.7 },
-    { "en": "I'm a T. rex!", "zh": "我是暴龍！", "start": 241.2, "end": 243.5 },
-    { "en": "You can come out now.", "zh": "你們可以出來了。", "start": 358.9, "end": 361.2 },
-    { "en": "My family loves me.", "zh": "我的家人愛我。", "start": 466.3, "end": 468.8 },
-    { "en": "Good night, kids!", "zh": "孩子們，晚安！", "start": 623.6, "end": 625.6 }
+    { "en": "Have fun!", "zh": "玩得開心！", "start": 11.9, "end": 13.2, "core": true },
+    { "en": "I'm getting hungry.", "zh": "我肚子餓了。", "start": 83.8, "end": 86.1, "core": true },
+    { "en": "I love adventures!", "zh": "我愛冒險！", "start": 99.2, "end": 101.7, "core": false },
+    { "en": "I'm a T. rex!", "zh": "我是暴龍！", "start": 241.2, "end": 243.5, "core": false },
+    { "en": "You can come out now.", "zh": "你們可以出來了。", "start": 358.9, "end": 361.2, "core": false },
+    { "en": "My family loves me.", "zh": "我的家人愛我。", "start": 466.3, "end": 468.8, "core": false },
+    { "en": "Good night, kids!", "zh": "孩子們，晚安！", "start": 623.6, "end": 625.6, "core": true }
+  ],
+  "story": [
+    { "en": "Buddy wants to know what he is.", "zh": "Buddy 想知道自己是什麼恐龍。" },
+    { "en": "They go to see a T. rex family.", "zh": "他們去找一個暴龍家庭。" },
+    { "en": "Annie has big teeth, like Buddy.", "zh": "Annie 跟 Buddy 一樣有大大的牙齒。" },
+    { "en": "Buddy is a T. rex!", "zh": "Buddy 是暴龍！" },
+    { "en": "Buddy loves his family.", "zh": "Buddy 愛他的家人。" }
   ]
 }

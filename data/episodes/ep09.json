@@ -10,21 +10,28 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "run", "zh": "跑", "time": 46, "emoji": "🏃" },
-    { "en": "sing", "zh": "唱歌", "time": 78.5, "emoji": "🎤" },
-    { "en": "song", "zh": "歌", "time": 66.3, "emoji": "🎵" },
-    { "en": "fast", "zh": "快的", "time": 112.7, "emoji": "⚡" },
-    { "en": "egg", "zh": "蛋", "time": 385.9, "emoji": "🥚" },
-    { "en": "tree", "zh": "樹", "time": 369.6, "emoji": "🌳" },
-    { "en": "rock", "zh": "石頭", "time": 479, "emoji": "🪨" }
+    { "en": "run", "zh": "跑", "time": 46, "emoji": "🏃", "core": true },
+    { "en": "sing", "zh": "唱歌", "time": 78.5, "emoji": "🎤", "core": false },
+    { "en": "song", "zh": "歌", "time": 66.3, "emoji": "🎵", "core": true },
+    { "en": "fast", "zh": "快的", "time": 112.7, "emoji": "⚡", "core": true },
+    { "en": "egg", "zh": "蛋", "time": 385.9, "emoji": "🥚", "core": false },
+    { "en": "tree", "zh": "樹", "time": 369.6, "emoji": "🌳", "core": true },
+    { "en": "rock", "zh": "石頭", "time": 479, "emoji": "🪨", "core": false }
   ],
   "sentences": [
-    { "en": "Go, Buddy, go!", "zh": "Buddy，加油！", "start": 45.1, "end": 47.5 },
-    { "en": "I know I can win.", "zh": "我知道我會贏。", "start": 53.2, "end": 55.3 },
-    { "en": "Hi, I'm Tiny!", "zh": "嗨，我是 Tiny！", "start": 281.3, "end": 283.3 },
-    { "en": "I love to race!", "zh": "我最愛賽跑！", "start": 354.4, "end": 356.2 },
-    { "en": "Good race!", "zh": "比得好！", "start": 408, "end": 409.8 },
-    { "en": "Let's do it!", "zh": "我們來吧！", "start": 476.1, "end": 477.5 },
-    { "en": "Go, Tiny! Fly fast!", "zh": "Tiny 加油！飛快一點！", "start": 525.1, "end": 527.4 }
+    { "en": "Go, Buddy, go!", "zh": "Buddy，加油！", "start": 45.1, "end": 47.5, "core": true },
+    { "en": "I know I can win.", "zh": "我知道我會贏。", "start": 53.2, "end": 55.3, "core": false },
+    { "en": "Hi, I'm Tiny!", "zh": "嗨，我是 Tiny！", "start": 281.3, "end": 283.3, "core": false },
+    { "en": "I love to race!", "zh": "我最愛賽跑！", "start": 354.4, "end": 356.2, "core": false },
+    { "en": "Good race!", "zh": "比得好！", "start": 408, "end": 409.8, "core": true },
+    { "en": "Let's do it!", "zh": "我們來吧！", "start": 476.1, "end": 477.5, "core": true },
+    { "en": "Go, Tiny! Fly fast!", "zh": "Tiny 加油！飛快一點！", "start": 525.1, "end": 527.4, "core": false }
+  ],
+  "story": [
+    { "en": "Buddy can run fast.", "zh": "Buddy 跑得很快。" },
+    { "en": "The twins can run very, very fast.", "zh": "那對雙胞胎跑得非常非常快。" },
+    { "en": "They have long legs.", "zh": "他們的腿很長。" },
+    { "en": "Buddy and Tiny run a race together.", "zh": "Buddy 和 Tiny 一起比賽。" },
+    { "en": "Tiny can fly fast, and they win!", "zh": "Tiny 飛得很快，他們贏了！" }
   ]
 }

@@ -10,20 +10,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "birthday", "zh": "生日", "time": 9.8, "emoji": "🎂" },
-    { "en": "feet", "zh": "腳", "time": 19.4, "emoji": "🦶" },
-    { "en": "music", "zh": "音樂", "time": 59.7, "emoji": "🎵" },
-    { "en": "window", "zh": "窗戶", "time": 155.8, "emoji": "🪟" },
-    { "en": "hat", "zh": "帽子", "time": 235.3, "emoji": "🎩" },
-    { "en": "dance", "zh": "跳舞", "time": 323.4, "emoji": "💃" }
+    { "en": "birthday", "zh": "生日", "time": 9.8, "emoji": "🎂", "core": true },
+    { "en": "feet", "zh": "腳", "time": 19.4, "emoji": "🦶", "core": true },
+    { "en": "music", "zh": "音樂", "time": 59.7, "emoji": "🎵", "core": true },
+    { "en": "window", "zh": "窗戶", "time": 155.8, "emoji": "🪟", "core": false },
+    { "en": "hat", "zh": "帽子", "time": 235.3, "emoji": "🎩", "core": false },
+    { "en": "dance", "zh": "跳舞", "time": 323.4, "emoji": "💃", "core": true }
   ],
   "sentences": [
-    { "en": "I love surprises!", "zh": "我最愛驚喜了！", "start": 37.6, "end": 39.9 },
-    { "en": "Don't worry!", "zh": "別擔心！", "start": 134.1, "end": 135.6 },
-    { "en": "Can I dance?", "zh": "我可以跳舞嗎？", "start": 323.6, "end": 325.3 },
-    { "en": "I'm so excited!", "zh": "我好興奮！", "start": 402.5, "end": 404.6 },
-    { "en": "Happy birthday, Mom!", "zh": "媽媽，生日快樂！", "start": 571.4, "end": 574.4 },
-    { "en": "So nice to meet you!", "zh": "很高興認識你們！", "start": 599.8, "end": 601.8 },
-    { "en": "See you later!", "zh": "待會見！", "start": 612.3, "end": 614.3 }
+    { "en": "I love surprises!", "zh": "我最愛驚喜了！", "start": 37.6, "end": 39.9, "core": false },
+    { "en": "Don't worry!", "zh": "別擔心！", "start": 134.1, "end": 135.6, "core": true },
+    { "en": "Can I dance?", "zh": "我可以跳舞嗎？", "start": 323.6, "end": 325.3, "core": false },
+    { "en": "I'm so excited!", "zh": "我好興奮！", "start": 402.5, "end": 404.6, "core": true },
+    { "en": "Happy birthday, Mom!", "zh": "媽媽，生日快樂！", "start": 571.4, "end": 574.4, "core": false },
+    { "en": "So nice to meet you!", "zh": "很高興認識你們！", "start": 599.8, "end": 601.8, "core": false },
+    { "en": "See you later!", "zh": "待會見！", "start": 612.3, "end": 614.3, "core": true }
+  ],
+  "story": [
+    { "en": "It is Mom's birthday.", "zh": "今天是媽媽的生日。" },
+    { "en": "The family rides the train to see Cory.", "zh": "全家搭火車去找 Cory。" },
+    { "en": "Cory has a big crest.", "zh": "Cory 頭上有一個大大的頭冠。" },
+    { "en": "Cory can hoot with her crest.", "zh": "Cory 會用頭冠發出呼呼聲。" },
+    { "en": "The kids sing a song for Mom.", "zh": "孩子們唱歌給媽媽聽。" }
   ]
 }

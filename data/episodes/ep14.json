@@ -10,20 +10,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "bush", "zh": "灌木叢", "time": 24.1, "emoji": "🌳" },
-    { "en": "beak", "zh": "鳥嘴", "time": 116, "emoji": "🐦" },
-    { "en": "green", "zh": "綠色", "time": 322.3, "emoji": "🟢" },
-    { "en": "bugs", "zh": "蟲子", "time": 428.3, "emoji": "🐛" },
-    { "en": "beetle", "zh": "甲蟲", "time": 439.7, "emoji": "🪲" },
-    { "en": "circles", "zh": "圓圈", "time": 645.6, "emoji": "⭕" }
+    { "en": "bush", "zh": "灌木叢", "time": 24.1, "emoji": "🌳", "core": true },
+    { "en": "beak", "zh": "鳥嘴", "time": 116, "emoji": "🐦", "core": true },
+    { "en": "green", "zh": "綠色", "time": 322.3, "emoji": "🟢", "core": true },
+    { "en": "bugs", "zh": "蟲子", "time": 428.3, "emoji": "🐛", "core": true },
+    { "en": "beetle", "zh": "甲蟲", "time": 439.7, "emoji": "🪲", "core": false },
+    { "en": "circles", "zh": "圓圈", "time": 645.6, "emoji": "⭕", "core": false }
   ],
   "sentences": [
-    { "en": "You found me again!", "zh": "你又找到我了！", "start": 22.2, "end": 24.7 },
-    { "en": "Can we go with you, Mom?", "zh": "媽媽，我們可以跟你去嗎？", "start": 145.7, "end": 147.9 },
-    { "en": "Welcome to our valley!", "zh": "歡迎來到我們的山谷！", "start": 276.8, "end": 278.6 },
-    { "en": "I like my teeth.", "zh": "我喜歡我的牙齒。", "start": 388.5, "end": 390.6 },
-    { "en": "Throw it again!", "zh": "再丟一次！", "start": 526.5, "end": 528.2 },
-    { "en": "We're all friends now!", "zh": "我們現在都是朋友了！", "start": 547.3, "end": 549.5 },
-    { "en": "Let's go fishing, Dad!", "zh": "爸爸，我們去釣魚吧！", "start": 653.9, "end": 659.1 }
+    { "en": "You found me again!", "zh": "你又找到我了！", "start": 22.2, "end": 24.7, "core": false },
+    { "en": "Can we go with you, Mom?", "zh": "媽媽，我們可以跟你去嗎？", "start": 145.7, "end": 147.9, "core": false },
+    { "en": "Welcome to our valley!", "zh": "歡迎來到我們的山谷！", "start": 276.8, "end": 278.6, "core": false },
+    { "en": "I like my teeth.", "zh": "我喜歡我的牙齒。", "start": 388.5, "end": 390.6, "core": true },
+    { "en": "Throw it again!", "zh": "再丟一次！", "start": 526.5, "end": 528.2, "core": true },
+    { "en": "We're all friends now!", "zh": "我們現在都是朋友了！", "start": 547.3, "end": 549.5, "core": true },
+    { "en": "Let's go fishing, Dad!", "zh": "爸爸，我們去釣魚吧！", "start": 653.9, "end": 659.1, "core": false }
+  ],
+  "story": [
+    { "en": "Petey is small, and he can fly.", "zh": "Petey 小小的，而且會飛。" },
+    { "en": "Petey can eat bugs.", "zh": "Petey 會吃蟲子。" },
+    { "en": "Buddy can not fly.", "zh": "Buddy 不會飛。" },
+    { "en": "Buddy can throw a stick.", "zh": "Buddy 會丟樹枝。" },
+    { "en": "Now they can all play together!", "zh": "現在大家都可以一起玩了！" }
   ]
 }

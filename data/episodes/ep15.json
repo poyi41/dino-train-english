@@ -10,20 +10,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "team", "zh": "隊伍", "time": 2.2, "emoji": "👥" },
-    { "en": "ball", "zh": "球", "time": 7.7, "emoji": "⚽" },
-    { "en": "one", "zh": "一", "time": 89.6, "emoji": "1️⃣" },
-    { "en": "mud", "zh": "泥巴", "time": 140.8, "emoji": "🟤" },
-    { "en": "crowd", "zh": "觀眾", "time": 138.8, "emoji": "👏" },
-    { "en": "goal", "zh": "得分", "time": 336.7, "emoji": "🥅" }
+    { "en": "team", "zh": "隊伍", "time": 2.2, "emoji": "👥", "core": true },
+    { "en": "ball", "zh": "球", "time": 7.7, "emoji": "⚽", "core": true },
+    { "en": "one", "zh": "一", "time": 89.6, "emoji": "1️⃣", "core": true },
+    { "en": "mud", "zh": "泥巴", "time": 140.8, "emoji": "🟤", "core": false },
+    { "en": "crowd", "zh": "觀眾", "time": 138.8, "emoji": "👏", "core": false },
+    { "en": "goal", "zh": "得分", "time": 336.7, "emoji": "🥅", "core": true }
   ],
   "sentences": [
-    { "en": "Let's play Dino ball!", "zh": "我們來玩恐龍球！", "start": 18.2, "end": 22.1 },
-    { "en": "I got it!", "zh": "我接到了！", "start": 21.3, "end": 23.6 },
-    { "en": "We win! We win!", "zh": "我們贏了！我們贏了！", "start": 50.6, "end": 53.1 },
-    { "en": "It's beautiful! It's amazing!", "zh": "好漂亮！好厲害！", "start": 222.3, "end": 226.7 },
-    { "en": "Heads up!", "zh": "注意！", "start": 463.1, "end": 464.4 },
-    { "en": "Let's go, kids!", "zh": "孩子們，走吧！", "start": 605.5, "end": 608.7 },
-    { "en": "What an amazing day!", "zh": "今天真是太棒了！", "start": 624.7, "end": 627.4 }
+    { "en": "Let's play Dino ball!", "zh": "我們來玩恐龍球！", "start": 18.2, "end": 22.1, "core": false },
+    { "en": "I got it!", "zh": "我接到了！", "start": 21.3, "end": 23.6, "core": true },
+    { "en": "We win! We win!", "zh": "我們贏了！我們贏了！", "start": 50.6, "end": 53.1, "core": false },
+    { "en": "It's beautiful! It's amazing!", "zh": "好漂亮！好厲害！", "start": 222.3, "end": 226.7, "core": false },
+    { "en": "Heads up!", "zh": "注意！", "start": 463.1, "end": 464.4, "core": true },
+    { "en": "Let's go, kids!", "zh": "孩子們，走吧！", "start": 605.5, "end": 608.7, "core": true },
+    { "en": "What an amazing day!", "zh": "今天真是太棒了！", "start": 624.7, "end": 627.4, "core": false }
+  ],
+  "story": [
+    { "en": "The family goes to a Dino ball game.", "zh": "全家去看恐龍球比賽。" },
+    { "en": "Hank is a big Ankylosaurus.", "zh": "Hank 是一隻大大的甲龍。" },
+    { "en": "Hank has hard plates on his back.", "zh": "Hank 的背上有硬硬的甲板。" },
+    { "en": "Hank can hit the ball with his tail.", "zh": "Hank 會用尾巴打球。" },
+    { "en": "The kids play ball with Hank!", "zh": "孩子們和 Hank 一起玩球！" }
   ]
 }

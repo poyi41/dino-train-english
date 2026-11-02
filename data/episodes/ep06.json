@@ -10,20 +10,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "four", "zh": "四", "time": 6.7, "emoji": "4️⃣" },
-    { "en": "three", "zh": "三", "time": 137.8, "emoji": "3️⃣" },
-    { "en": "leaves", "zh": "葉子", "time": 92.6, "emoji": "🍃" },
-    { "en": "lunch", "zh": "午餐", "time": 24, "emoji": "🍱" },
-    { "en": "hungry", "zh": "肚子餓", "time": 183.2, "emoji": "😋" },
-    { "en": "green", "zh": "綠色", "time": 576.4, "emoji": "🟢" }
+    { "en": "four", "zh": "四", "time": 6.7, "emoji": "4️⃣", "core": false },
+    { "en": "three", "zh": "三", "time": 137.8, "emoji": "3️⃣", "core": true },
+    { "en": "leaves", "zh": "葉子", "time": 92.6, "emoji": "🍃", "core": true },
+    { "en": "lunch", "zh": "午餐", "time": 24, "emoji": "🍱", "core": true },
+    { "en": "hungry", "zh": "肚子餓", "time": 183.2, "emoji": "😋", "core": true },
+    { "en": "green", "zh": "綠色", "time": 576.4, "emoji": "🟢", "core": false }
   ],
   "sentences": [
-    { "en": "Kids, come help me!", "zh": "孩子們，來幫我！", "start": 8.9, "end": 11.1 },
-    { "en": "I can't wait!", "zh": "我等不及了！", "start": 127.7, "end": 129.3 },
-    { "en": "I love plants!", "zh": "我愛吃植物！", "start": 177.6, "end": 180.1 },
-    { "en": "I am hungry.", "zh": "我肚子餓了。", "start": 183.5, "end": 185.7 },
-    { "en": "Open wide, please.", "zh": "請把嘴巴張大。", "start": 409.5, "end": 412.1 },
-    { "en": "I want a fish stick.", "zh": "我要一根魚條。", "start": 467.2, "end": 469.7 },
-    { "en": "No leaves for me.", "zh": "我不要葉子。", "start": 607, "end": 609.1 }
+    { "en": "Kids, come help me!", "zh": "孩子們，來幫我！", "start": 8.9, "end": 11.1, "core": false },
+    { "en": "I can't wait!", "zh": "我等不及了！", "start": 127.7, "end": 129.3, "core": true },
+    { "en": "I love plants!", "zh": "我愛吃植物！", "start": 177.6, "end": 180.1, "core": true },
+    { "en": "I am hungry.", "zh": "我肚子餓了。", "start": 183.5, "end": 185.7, "core": true },
+    { "en": "Open wide, please.", "zh": "請把嘴巴張大。", "start": 409.5, "end": 412.1, "core": false },
+    { "en": "I want a fish stick.", "zh": "我要一根魚條。", "start": 467.2, "end": 469.7, "core": false },
+    { "en": "No leaves for me.", "zh": "我不要葉子。", "start": 607, "end": 609.1, "core": false }
+  ],
+  "story": [
+    { "en": "Tank and his mom come for lunch.", "zh": "Tank 和媽媽來吃午餐。" },
+    { "en": "Tank is a Triceratops.", "zh": "Tank 是一隻三角龍。" },
+    { "en": "Tank does not eat fish.", "zh": "Tank 不吃魚。" },
+    { "en": "Tank can eat a lot of leaves.", "zh": "Tank 可以吃好多葉子。" },
+    { "en": "Buddy does not like leaves.", "zh": "Buddy 不喜歡吃葉子。" }
   ]
 }

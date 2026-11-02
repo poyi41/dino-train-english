@@ -10,20 +10,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "tree", "zh": "樹", "time": 93.8, "emoji": "🌳" },
-    { "en": "mountain", "zh": "山", "time": 185.5, "emoji": "⛰️" },
-    { "en": "nest", "zh": "巢", "time": 303, "emoji": "🪺" },
-    { "en": "left", "zh": "左邊", "time": 609.8, "emoji": "⬅️" },
-    { "en": "down", "zh": "往下", "time": 610.4, "emoji": "⬇️" },
-    { "en": "tall", "zh": "高的", "time": 641.4, "emoji": "📏" }
+    { "en": "tree", "zh": "樹", "time": 93.8, "emoji": "🌳", "core": true },
+    { "en": "mountain", "zh": "山", "time": 185.5, "emoji": "⛰️", "core": true },
+    { "en": "nest", "zh": "巢", "time": 303, "emoji": "🪺", "core": true },
+    { "en": "left", "zh": "左邊", "time": 609.8, "emoji": "⬅️", "core": false },
+    { "en": "down", "zh": "往下", "time": 610.4, "emoji": "⬇️", "core": true },
+    { "en": "tall", "zh": "高的", "time": 641.4, "emoji": "📏", "core": false }
   ],
   "sentences": [
-    { "en": "Great job, Tiny!", "zh": "Tiny，做得好！", "start": 48.9, "end": 51.1 },
-    { "en": "Don't worry!", "zh": "別擔心！", "start": 68.1, "end": 69.4 },
-    { "en": "Hello, Mikey!", "zh": "哈囉，Mikey！", "start": 308.2, "end": 310.1 },
-    { "en": "Are you watching?", "zh": "你有在看嗎？", "start": 417.3, "end": 419.2 },
-    { "en": "Can we go, Mom?", "zh": "媽媽，我們可以去嗎？", "start": 456.3, "end": 457.8 },
-    { "en": "Be careful!", "zh": "小心喔！", "start": 593.9, "end": 597.3 },
-    { "en": "You did it!", "zh": "你做到了！", "start": 618.8, "end": 620.7 }
+    { "en": "Great job, Tiny!", "zh": "Tiny，做得好！", "start": 48.9, "end": 51.1, "core": false },
+    { "en": "Don't worry!", "zh": "別擔心！", "start": 68.1, "end": 69.4, "core": true },
+    { "en": "Hello, Mikey!", "zh": "哈囉，Mikey！", "start": 308.2, "end": 310.1, "core": false },
+    { "en": "Are you watching?", "zh": "你有在看嗎？", "start": 417.3, "end": 419.2, "core": false },
+    { "en": "Can we go, Mom?", "zh": "媽媽，我們可以去嗎？", "start": 456.3, "end": 457.8, "core": false },
+    { "en": "Be careful!", "zh": "小心喔！", "start": 593.9, "end": 597.3, "core": true },
+    { "en": "You did it!", "zh": "你做到了！", "start": 618.8, "end": 620.7, "core": true }
+  ],
+  "story": [
+    { "en": "Tiny is small, but Mikey is smaller.", "zh": "Tiny 很小，可是 Mikey 更小。" },
+    { "en": "Mikey is a Microraptor.", "zh": "Mikey 是一隻小盜龍。" },
+    { "en": "Mikey can climb up a tree.", "zh": "Mikey 會爬樹。" },
+    { "en": "Tiny and Mikey help the train.", "zh": "Tiny 和 Mikey 幫忙修好火車。" },
+    { "en": "Small friends can do big things!", "zh": "小小的朋友也能做大事！" }
   ]
 }

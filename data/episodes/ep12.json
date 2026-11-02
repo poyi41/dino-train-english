@@ -11,20 +11,27 @@
     { "en": "Tyrannosaurus", "zh": "暴龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "feather", "zh": "羽毛", "time": 72.7, "emoji": "🪶" },
-    { "en": "sand", "zh": "沙子", "time": 393.4, "emoji": "🏖️" },
-    { "en": "hill", "zh": "小山丘", "time": 425.1, "emoji": "⛰️" },
-    { "en": "warm", "zh": "溫暖的", "time": 505.2, "emoji": "🧣" },
-    { "en": "cold", "zh": "冷的", "time": 508.4, "emoji": "🥶" },
-    { "en": "sun", "zh": "太陽", "time": 512.2, "emoji": "☀️" }
+    { "en": "feather", "zh": "羽毛", "time": 72.7, "emoji": "🪶", "core": true },
+    { "en": "sand", "zh": "沙子", "time": 393.4, "emoji": "🏖️", "core": false },
+    { "en": "hill", "zh": "小山丘", "time": 425.1, "emoji": "⛰️", "core": true },
+    { "en": "warm", "zh": "溫暖的", "time": 505.2, "emoji": "🧣", "core": true },
+    { "en": "cold", "zh": "冷的", "time": 508.4, "emoji": "🥶", "core": true },
+    { "en": "sun", "zh": "太陽", "time": 512.2, "emoji": "☀️", "core": false }
   ],
   "sentences": [
-    { "en": "I'm flying! I'm flying!", "zh": "我在飛！我在飛！", "start": 12.1, "end": 16.3 },
-    { "en": "Here I am!", "zh": "我在這裡！", "start": 19.5, "end": 21.8 },
-    { "en": "See you at dinner!", "zh": "晚餐見！", "start": 116.4, "end": 120.3 },
-    { "en": "Nice to meet you!", "zh": "很高興認識你！", "start": 330.6, "end": 335.5 },
-    { "en": "Ready, set, go!", "zh": "預備，開始！", "start": 428.2, "end": 431.4 },
-    { "en": "Let's all be friends!", "zh": "我們都來當朋友吧！", "start": 491.2, "end": 493.3 },
-    { "en": "Thanks for the show!", "zh": "謝謝你們的表演！", "start": 607.8, "end": 609.6 }
+    { "en": "I'm flying! I'm flying!", "zh": "我在飛！我在飛！", "start": 12.1, "end": 16.3, "core": false },
+    { "en": "Here I am!", "zh": "我在這裡！", "start": 19.5, "end": 21.8, "core": true },
+    { "en": "See you at dinner!", "zh": "晚餐見！", "start": 116.4, "end": 120.3, "core": false },
+    { "en": "Nice to meet you!", "zh": "很高興認識你！", "start": 330.6, "end": 335.5, "core": true },
+    { "en": "Ready, set, go!", "zh": "預備，開始！", "start": 428.2, "end": 431.4, "core": true },
+    { "en": "Let's all be friends!", "zh": "我們都來當朋友吧！", "start": 491.2, "end": 493.3, "core": false },
+    { "en": "Thanks for the show!", "zh": "謝謝你們的表演！", "start": 607.8, "end": 609.6, "core": false }
+  ],
+  "story": [
+    { "en": "Dad finds a feather on the train.", "zh": "爸爸在火車上撿到一根羽毛。" },
+    { "en": "Whose feather is it?", "zh": "這是誰的羽毛呢？" },
+    { "en": "They go to see Valerie.", "zh": "他們去找 Valerie。" },
+    { "en": "Valerie has a lot of feathers.", "zh": "Valerie 有好多羽毛。" },
+    { "en": "Her feathers keep her warm.", "zh": "羽毛讓她暖暖的。" }
   ]
 }

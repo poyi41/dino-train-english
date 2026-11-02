@@ -11,20 +11,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "bird", "zh": "鳥", "time": 24.5, "emoji": "🐦" },
-    { "en": "eye", "zh": "眼睛", "time": 125.4, "emoji": "👁️" },
-    { "en": "draw", "zh": "畫畫", "time": 325.7, "emoji": "✏️" },
-    { "en": "river", "zh": "河", "time": 311.2, "emoji": "🏞️" },
-    { "en": "ears", "zh": "耳朵", "time": 374.5, "emoji": "👂" },
-    { "en": "star", "zh": "星星", "time": 628.1, "emoji": "⭐" }
+    { "en": "bird", "zh": "鳥", "time": 24.5, "emoji": "🐦", "core": true },
+    { "en": "eye", "zh": "眼睛", "time": 125.4, "emoji": "👁️", "core": true },
+    { "en": "draw", "zh": "畫畫", "time": 325.7, "emoji": "✏️", "core": true },
+    { "en": "river", "zh": "河", "time": 311.2, "emoji": "🏞️", "core": false },
+    { "en": "ears", "zh": "耳朵", "time": 374.5, "emoji": "👂", "core": false },
+    { "en": "star", "zh": "星星", "time": 628.1, "emoji": "⭐", "core": true }
   ],
   "sentences": [
-    { "en": "It is beautiful!", "zh": "好漂亮！", "start": 27.6, "end": 29.6 },
-    { "en": "Let's follow it!", "zh": "我們跟著它！", "start": 28.8, "end": 30.7 },
-    { "en": "Hi, Laura!", "zh": "嗨，Laura！", "start": 140.3, "end": 142 },
-    { "en": "Yes, please!", "zh": "好，麻煩你！", "start": 333.5, "end": 335.7 },
-    { "en": "Stop the train!", "zh": "停車！", "start": 376.2, "end": 378.7 },
-    { "en": "I would love to!", "zh": "我很樂意！", "start": 505.9, "end": 508.7 },
-    { "en": "Go to sleep now.", "zh": "現在去睡覺。", "start": 645.5, "end": 647.3 }
+    { "en": "It is beautiful!", "zh": "好漂亮！", "start": 27.6, "end": 29.6, "core": false },
+    { "en": "Let's follow it!", "zh": "我們跟著它！", "start": 28.8, "end": 30.7, "core": false },
+    { "en": "Hi, Laura!", "zh": "嗨，Laura！", "start": 140.3, "end": 142, "core": true },
+    { "en": "Yes, please!", "zh": "好，麻煩你！", "start": 333.5, "end": 335.7, "core": true },
+    { "en": "Stop the train!", "zh": "停車！", "start": 376.2, "end": 378.7, "core": false },
+    { "en": "I would love to!", "zh": "我很樂意！", "start": 505.9, "end": 508.7, "core": true },
+    { "en": "Go to sleep now.", "zh": "現在去睡覺。", "start": 645.5, "end": 647.3, "core": false }
+  ],
+  "story": [
+    { "en": "Buddy and Tiny see a pretty bird.", "zh": "Buddy 和 Tiny 看到一隻漂亮的鳥。" },
+    { "en": "Laura is a big Giganotosaurus.", "zh": "Laura 是一隻大大的南方巨獸龍。" },
+    { "en": "Laura can see far with her eyes.", "zh": "Laura 的眼睛看得很遠。" },
+    { "en": "A big tree is on the track!", "zh": "一棵大樹倒在鐵軌上！" },
+    { "en": "Laura is strong, so she can move it.", "zh": "Laura 力氣很大，可以把它搬開。" }
   ]
 }

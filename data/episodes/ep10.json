@@ -11,20 +11,27 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "train", "zh": "火車", "time": 28.7, "emoji": "🚂" },
-    { "en": "whistle", "zh": "汽笛", "time": 170.8, "emoji": "📯" },
-    { "en": "school", "zh": "學校", "time": 216.3, "emoji": "🏫" },
-    { "en": "picture", "zh": "圖片", "time": 191.9, "emoji": "🖼️" },
-    { "en": "slow", "zh": "慢的", "time": 331.5, "emoji": "🐢" },
-    { "en": "tea", "zh": "茶", "time": 454.1, "emoji": "🍵" }
+    { "en": "train", "zh": "火車", "time": 28.7, "emoji": "🚂", "core": true },
+    { "en": "whistle", "zh": "汽笛", "time": 170.8, "emoji": "📯", "core": true },
+    { "en": "school", "zh": "學校", "time": 216.3, "emoji": "🏫", "core": true },
+    { "en": "picture", "zh": "圖片", "time": 191.9, "emoji": "🖼️", "core": true },
+    { "en": "slow", "zh": "慢的", "time": 331.5, "emoji": "🐢", "core": false },
+    { "en": "tea", "zh": "茶", "time": 454.1, "emoji": "🍵", "core": false }
   ],
   "sentences": [
-    { "en": "Good luck!", "zh": "祝你好運！", "start": 72.1, "end": 73.8 },
-    { "en": "I love everything about it.", "zh": "我全部都喜歡。", "start": 159.6, "end": 161.7 },
-    { "en": "I like trains!", "zh": "我喜歡火車！", "start": 218, "end": 222.1 },
-    { "en": "Good morning! My name is Buddy.", "zh": "早安！我叫 Buddy。", "start": 235.4, "end": 238.6 },
-    { "en": "Can we, Mom? Please?", "zh": "媽媽，可以嗎？拜託？", "start": 299.6, "end": 303.9 },
-    { "en": "Hey, Mom! Hey, Dad!", "zh": "嗨，媽媽！嗨，爸爸！", "start": 592.3, "end": 595.7 },
-    { "en": "See you soon!", "zh": "待會見！", "start": 646.4, "end": 648.2 }
+    { "en": "Good luck!", "zh": "祝你好運！", "start": 72.1, "end": 73.8, "core": true },
+    { "en": "I love everything about it.", "zh": "我全部都喜歡。", "start": 159.6, "end": 161.7, "core": false },
+    { "en": "I like trains!", "zh": "我喜歡火車！", "start": 218, "end": 222.1, "core": true },
+    { "en": "Good morning! My name is Buddy.", "zh": "早安！我叫 Buddy。", "start": 235.4, "end": 238.6, "core": false },
+    { "en": "Can we, Mom? Please?", "zh": "媽媽，可以嗎？拜託？", "start": 299.6, "end": 303.9, "core": false },
+    { "en": "Hey, Mom! Hey, Dad!", "zh": "嗨，媽媽！嗨，爸爸！", "start": 592.3, "end": 595.7, "core": false },
+    { "en": "See you soon!", "zh": "待會見！", "start": 646.4, "end": 648.2, "core": true }
+  ],
+  "story": [
+    { "en": "Buddy and Tiny help on the train.", "zh": "Buddy 和 Tiny 在火車上幫忙。" },
+    { "en": "Ned is a big Brachiosaurus.", "zh": "Ned 是一隻大大的腕龍。" },
+    { "en": "Ned has four legs.", "zh": "Ned 有四條腿。" },
+    { "en": "Ned can eat leaves up high.", "zh": "Ned 可以吃高高的葉子。" },
+    { "en": "Now Buddy and Tiny are junior conductors!", "zh": "Buddy 和 Tiny 當上小列車長了！" }
   ]
 }
