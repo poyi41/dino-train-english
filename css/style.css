@@ -1148,3 +1148,59 @@ body {
 .credits-list li {
   margin-bottom: 12px;
 }
+
+/* ---------- 單集頁：「更多」收合區 ---------- */
+
+.more-toggle {
+  display: block;
+  min-height: var(--tap-min);
+  margin: 16px auto 0;
+  padding: 10px 28px;
+  border: 3px dashed #c8b89a;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-soft);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.more-items {
+  margin-top: 16px;
+}
+
+/* 編輯模式：core 勾選與計數 */
+
+.core-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.core-toggle input {
+  width: 20px;
+  height: 20px;
+}
+
+.core-toggle:has(input:checked) {
+  border-color: var(--orange);
+  background: #fff3e0;
+}
+
+.core-count {
+  color: var(--text-soft);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.core-count.over {
+  color: var(--orange);
+  font-weight: 700;
+}

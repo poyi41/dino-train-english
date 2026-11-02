@@ -1,4 +1,4 @@
-import { loadEpisode } from './data.js';
+import { loadEpisode, MAX_CORE } from './data.js';
 import { createPlayer } from './player.js';
 import { speak } from './speech.js';
 import { el } from './dom.js';
@@ -22,33 +22,64 @@ function flash(node, className = 'pressed', ms = 600) {
   setTimeout(() => node.classList.remove(className), ms);
 }
 
+/* ---------- core 優先，其他收進「更多」 ---------- */
+
+// 這集有標 core 時：core 項目（最多 max 個）先顯示，其餘照原順序收進「更多」。
+// 還沒標 core 的集數全部直接顯示
+function splitCore(items, max) {
+  if (!items.some((item) => item.core === true)) return { main: items, more: [] };
+  const main = items.filter((item) => item.core === true).slice(0, max);
+  return { main, more: items.filter((item) => !main.includes(item)) };
+}
+
+// 在 container 後面加「➕ 更多」按鈕與收合區；收合區沿用 container 的 class（同樣的版面）
+function renderWithMore(container, items, max, makeItem) {
+  const { main, more } = splitCore(items, max);
+  container.replaceChildren(...main.map(makeItem));
+  container.parentElement.querySelectorAll('.more-toggle, .more-items').forEach((n) => n.remove());
+  if (!more.length) return;
+
+  const moreBox = el('div', `${container.className} more-items`);
+  moreBox.hidden = true;
+  moreBox.append(...more.map(makeItem));
+  const toggle = el('button', 'more-toggle tappable');
+  toggle.type = 'button';
+  const label = () => {
+    toggle.textContent = moreBox.hidden ? `➕ 更多（${more.length}）` : '➖ 收起來';
+  };
+  label();
+  toggle.addEventListener('click', () => {
+    moreBox.hidden = !moreBox.hidden;
+    label();
+  });
+  container.after(toggle, moreBox);
+}
+
 function renderWords(words, playerReady) {
   const grid = document.getElementById('words');
-  grid.replaceChildren(
-    ...words.map((word) => {
-      const card = el('div', 'word-card');
+  renderWithMore(grid, words, MAX_CORE.words, (word) => {
+    const card = el('div', 'word-card');
 
-      const sayBtn = el('button', 'word-say tappable');
-      sayBtn.type = 'button';
-      sayBtn.append(el('div', 'emoji', word.emoji), el('div', 'en', word.en), el('div', 'zh', word.zh));
-      sayBtn.addEventListener('click', () => {
-        speak(word.en);
-        flash(sayBtn);
+    const sayBtn = el('button', 'word-say tappable');
+    sayBtn.type = 'button';
+    sayBtn.append(el('div', 'emoji', word.emoji), el('div', 'en', word.en), el('div', 'zh', word.zh));
+    sayBtn.addEventListener('click', () => {
+      speak(word.en);
+      flash(sayBtn);
+    });
+    card.append(sayBtn);
+
+    if (typeof word.time === 'number') {
+      const watchBtn = el('button', 'word-watch tappable', '🎬');
+      watchBtn.type = 'button';
+      watchBtn.setAttribute('aria-label', `看影片中的 ${word.en}`);
+      watchBtn.addEventListener('click', async () => {
+        (await playerReady)?.playFrom(word.time);
       });
-      card.append(sayBtn);
-
-      if (typeof word.time === 'number') {
-        const watchBtn = el('button', 'word-watch tappable', '🎬');
-        watchBtn.type = 'button';
-        watchBtn.setAttribute('aria-label', `看影片中的 ${word.en}`);
-        watchBtn.addEventListener('click', async () => {
-          (await playerReady)?.playFrom(word.time);
-        });
-        card.append(watchBtn);
-      }
-      return card;
-    }),
-  );
+      card.append(watchBtn);
+    }
+    return card;
+  });
   document.getElementById('words-section').hidden = words.length === 0;
 }
 
@@ -56,28 +87,26 @@ function renderSentences(sentences, playerReady) {
   const list = document.getElementById('sentences');
   let playingBtn = null;
 
-  list.replaceChildren(
-    ...sentences.map((s) => {
-      const btn = el('button', 'sentence tappable');
-      btn.type = 'button';
-      const text = el('div', 'sentence-text');
-      text.append(el('div', 'en', s.en), el('div', 'zh', s.zh));
-      btn.append(el('div', 'sentence-icon', '▶'), text);
+  renderWithMore(list, sentences, MAX_CORE.sentences, (s) => {
+    const btn = el('button', 'sentence tappable');
+    btn.type = 'button';
+    const text = el('div', 'sentence-text');
+    text.append(el('div', 'en', s.en), el('div', 'zh', s.zh));
+    btn.append(el('div', 'sentence-icon', '▶'), text);
 
-      btn.addEventListener('click', async () => {
-        const player = await playerReady;
-        if (!player) return;
-        playingBtn?.classList.remove('playing');
-        playingBtn = btn;
-        btn.classList.add('playing');
-        player.playSegment(s.start, s.end, () => {
-          btn.classList.remove('playing');
-          if (playingBtn === btn) playingBtn = null;
-        });
+    btn.addEventListener('click', async () => {
+      const player = await playerReady;
+      if (!player) return;
+      playingBtn?.classList.remove('playing');
+      playingBtn = btn;
+      btn.classList.add('playing');
+      player.playSegment(s.start, s.end, () => {
+        btn.classList.remove('playing');
+        if (playingBtn === btn) playingBtn = null;
       });
-      return btn;
-    }),
-  );
+    });
+    return btn;
+  });
   document.getElementById('sentences-section').hidden = sentences.length === 0;
 }
 

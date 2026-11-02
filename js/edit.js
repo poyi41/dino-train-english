@@ -1,4 +1,4 @@
-import { loadAllEpisodes, loadEpisode } from './data.js';
+import { loadAllEpisodes, loadEpisode, MAX_CORE } from './data.js';
 import { createPlayer } from './player.js';
 import { speak } from './speech.js';
 import { el } from './dom.js';
@@ -218,7 +218,31 @@ function renderMeta() {
   );
 }
 
+// core 勾選框：勾了的項目在單集頁預設顯示，其他收進「更多」
+function coreToggle(item, kind) {
+  const wrap = el('label', 'core-toggle');
+  const box = el('input');
+  box.type = 'checkbox';
+  box.checked = item.core === true;
+  box.addEventListener('change', () => {
+    item.core = box.checked;
+    markDirty();
+    updateCoreCount(kind);
+  });
+  wrap.append(box, '⭐ core');
+  return wrap;
+}
+
+function updateCoreCount(kind) {
+  const n = ep[kind].filter((item) => item.core === true).length;
+  const max = MAX_CORE[kind];
+  const counter = $(`${kind}-core`);
+  counter.textContent = n > max ? `core ${n} / ${max}（單集頁只會顯示前 ${max} 個）` : `core ${n} / ${max}`;
+  counter.classList.toggle('over', n > max);
+}
+
 function renderSentences() {
+  updateCoreCount('sentences');
   $('sentences').replaceChildren(
     ...ep.sentences.map((s) => {
       const row = el('div', 'edit-row');
@@ -230,6 +254,7 @@ function renderSentences() {
 
       const actions = el('div', 'row-actions');
       actions.append(
+        coreToggle(s, 'sentences'),
         smallButton('▶ 試播', () => player?.playSegment(s.start, s.end)),
         deleteButton(ep.sentences, s, renderSentences),
       );
@@ -241,6 +266,7 @@ function renderSentences() {
 }
 
 function renderWords() {
+  updateCoreCount('words');
   $('words').replaceChildren(
     ...ep.words.map((w) => {
       const row = el('div', 'edit-row');
@@ -256,6 +282,7 @@ function renderWords() {
 
       const actions = el('div', 'row-actions');
       actions.append(
+        coreToggle(w, 'words'),
         smallButton('🔊', () => speak(w.en), '聽發音'),
         smallButton('🎬', () => player?.playFrom(w.time), '從這裡播放'),
         deleteButton(ep.words, w, renderWords),
@@ -320,8 +347,8 @@ function formatEpisode() {
   "videoId": ${JSON.stringify(ep.videoId)},
   "title": ${line({ en: trim(ep.title.en), zh: trim(ep.title.zh) })},
   "dinosaurs": ${list(ep.dinosaurs.map((d) => ({ en: trim(d.en), zh: trim(d.zh), emoji: trim(d.emoji) })))},
-  "words": ${list(ep.words.map((w) => ({ en: trim(w.en), zh: trim(w.zh), time: round1(w.time), emoji: trim(w.emoji) })))},
-  "sentences": ${list(ep.sentences.map((s) => ({ en: trim(s.en), zh: trim(s.zh), start: round1(s.start), end: round1(s.end) })))}
+  "words": ${list(ep.words.map((w) => ({ en: trim(w.en), zh: trim(w.zh), time: round1(w.time), emoji: trim(w.emoji), core: w.core === true })))},
+  "sentences": ${list(ep.sentences.map((s) => ({ en: trim(s.en), zh: trim(s.zh), start: round1(s.start), end: round1(s.end), core: s.core === true })))}
 }
 `;
 }

@@ -65,6 +65,7 @@
       <section class="edit-section">
         <h2>💬 句子
           <button type="button" id="sort-sentences" class="small-btn">依時間排序</button>
+          <span id="sentences-core" class="core-count"></span>
         </h2>
         <p class="hint">影片播到句子開頭按開始的 ⏱，講完按結束的 ⏱，再按 ▶ 試播確認。</p>
         <div id="sentences"></div>
@@ -74,7 +75,9 @@
       <section class="edit-section">
         <h2>🔤 單字
           <button type="button" id="sort-words" class="small-btn">依時間排序</button>
+          <span id="words-core" class="core-count"></span>
         </h2>
+        <p class="hint">勾 ⭐ core 的項目在單集頁直接顯示（單字最多 4 個、句子最多 3 句），其他收在「更多」。整集都沒勾就全部顯示。</p>
         <div id="words"></div>
         <button type="button" id="add-word" class="small-btn add-btn">➕ 新增單字（從目前時間）</button>
       </section>

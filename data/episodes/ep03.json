@@ -10,21 +10,21 @@
     { "en": "Troodon", "zh": "傷齒龍", "emoji": "🦖" }
   ],
   "words": [
-    { "en": "hot", "zh": "熱", "time": 6.5, "emoji": "🥵" },
-    { "en": "mom", "zh": "媽媽", "time": 17.6, "emoji": "👩" },
-    { "en": "grass", "zh": "草", "time": 206, "emoji": "🌱" },
-    { "en": "flowers", "zh": "花", "time": 207.4, "emoji": "🌸" },
-    { "en": "big", "zh": "大的", "time": 268, "emoji": "🐘" },
-    { "en": "tail", "zh": "尾巴", "time": 323.1, "emoji": "🦎" },
-    { "en": "wind", "zh": "風", "time": 343.6, "emoji": "🌬️" }
+    { "en": "hot", "zh": "熱", "time": 6.5, "emoji": "🥵", "core": true },
+    { "en": "mom", "zh": "媽媽", "time": 17.6, "emoji": "👩", "core": true },
+    { "en": "grass", "zh": "草", "time": 206, "emoji": "🌱", "core": false },
+    { "en": "flowers", "zh": "花", "time": 207.4, "emoji": "🌸", "core": false },
+    { "en": "big", "zh": "大的", "time": 268, "emoji": "🐘", "core": true },
+    { "en": "tail", "zh": "尾巴", "time": 323.1, "emoji": "🦎", "core": false },
+    { "en": "wind", "zh": "風", "time": 343.6, "emoji": "🌬️", "core": true }
   ],
   "sentences": [
-    { "en": "Boy, is it hot!", "zh": "哇，好熱喔！", "start": 6.4, "end": 8.9 },
-    { "en": "Thanks, Mom.", "zh": "謝謝媽媽。", "start": 18.3, "end": 20.2 },
-    { "en": "It's too hot to play.", "zh": "太熱了，不想玩。", "start": 36.2, "end": 38.7 },
-    { "en": "Come on, let's go!", "zh": "快點，走吧！", "start": 196.9, "end": 199.2 },
-    { "en": "Hi, I'm Tiny!", "zh": "嗨，我是 Tiny！", "start": 284.5, "end": 286.4 },
-    { "en": "Tickets, please!", "zh": "請出示車票！", "start": 555, "end": 557.3 },
-    { "en": "It's finally cool!", "zh": "終於涼快了！", "start": 641, "end": 643.8 }
+    { "en": "Boy, is it hot!", "zh": "哇，好熱喔！", "start": 6.4, "end": 8.9, "core": false },
+    { "en": "Thanks, Mom.", "zh": "謝謝媽媽。", "start": 18.3, "end": 20.2, "core": true },
+    { "en": "It's too hot to play.", "zh": "太熱了，不想玩。", "start": 36.2, "end": 38.7, "core": true },
+    { "en": "Come on, let's go!", "zh": "快點，走吧！", "start": 196.9, "end": 199.2, "core": true },
+    { "en": "Hi, I'm Tiny!", "zh": "嗨，我是 Tiny！", "start": 284.5, "end": 286.4, "core": false },
+    { "en": "Tickets, please!", "zh": "請出示車票！", "start": 555, "end": 557.3, "core": false },
+    { "en": "It's finally cool!", "zh": "終於涼快了！", "start": 641, "end": 643.8, "core": false }
   ]
 }

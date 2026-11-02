@@ -11,22 +11,22 @@
     { "en": "Triceratops", "zh": "三角龍", "emoji": "🦕" }
   ],
   "words": [
-    { "en": "train", "zh": "火車", "time": 50, "emoji": "🚂" },
-    { "en": "ticket", "zh": "車票", "time": 155, "emoji": "🎟️" },
-    { "en": "horn", "zh": "角", "time": 330, "emoji": "🦏" },
-    { "en": "nest", "zh": "巢", "time": 477.5, "emoji": "🪺" },
-    { "en": "egg", "zh": "蛋", "time": 478.5, "emoji": "🥚" },
-    { "en": "hatch", "zh": "孵出來", "time": 499, "emoji": "🐣" },
-    { "en": "wings", "zh": "翅膀", "time": 560, "emoji": "🪽" },
-    { "en": "fish", "zh": "魚", "time": 651.5, "emoji": "🐟" }
+    { "en": "train", "zh": "火車", "time": 50, "emoji": "🚂", "core": true },
+    { "en": "ticket", "zh": "車票", "time": 155, "emoji": "🎟️", "core": true },
+    { "en": "horn", "zh": "角", "time": 330, "emoji": "🦏", "core": true },
+    { "en": "nest", "zh": "巢", "time": 477.5, "emoji": "🪺", "core": false },
+    { "en": "egg", "zh": "蛋", "time": 478.5, "emoji": "🥚", "core": false },
+    { "en": "hatch", "zh": "孵出來", "time": 499, "emoji": "🐣", "core": false },
+    { "en": "wings", "zh": "翅膀", "time": 560, "emoji": "🪽", "core": false },
+    { "en": "fish", "zh": "魚", "time": 651.5, "emoji": "🐟", "core": true }
   ],
   "sentences": [
-    { "en": "Tickets, please!", "zh": "請出示車票！", "start": 155.5, "end": 157.8 },
-    { "en": "It's a Time Tunnel!", "zh": "是時光隧道！", "start": 234.4, "end": 236.5 },
-    { "en": "Are we there yet?", "zh": "我們到了嗎？", "start": 291.1, "end": 292.7 },
-    { "en": "That's a lot of horns!", "zh": "好多角喔！", "start": 330.5, "end": 333.8 },
-    { "en": "Cool! Let's go!", "zh": "好酷！走吧！", "start": 480.6, "end": 483 },
-    { "en": "It's hatching!", "zh": "要孵出來了！", "start": 499.6, "end": 502.3 },
-    { "en": "I love you, Mom.", "zh": "媽媽，我愛妳。", "start": 601.7, "end": 604 }
+    { "en": "Tickets, please!", "zh": "請出示車票！", "start": 155.5, "end": 157.8, "core": true },
+    { "en": "It's a Time Tunnel!", "zh": "是時光隧道！", "start": 234.4, "end": 236.5, "core": false },
+    { "en": "Are we there yet?", "zh": "我們到了嗎？", "start": 291.1, "end": 292.7, "core": true },
+    { "en": "That's a lot of horns!", "zh": "好多角喔！", "start": 330.5, "end": 333.8, "core": false },
+    { "en": "Cool! Let's go!", "zh": "好酷！走吧！", "start": 480.6, "end": 483, "core": true },
+    { "en": "It's hatching!", "zh": "要孵出來了！", "start": 499.6, "end": 502.3, "core": false },
+    { "en": "I love you, Mom.", "zh": "媽媽，我愛妳。", "start": 601.7, "end": 604, "core": false }
   ]
 }
