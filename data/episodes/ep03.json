@@ -26,5 +26,12 @@
     { "en": "Hi, I'm Tiny!", "zh": "嗨，我是 Tiny！", "start": 284.5, "end": 286.4, "core": false },
     { "en": "Tickets, please!", "zh": "請出示車票！", "start": 555, "end": 557.3, "core": false },
     { "en": "It's finally cool!", "zh": "終於涼快了！", "start": 641, "end": 643.8, "core": false }
+  ],
+  "story": [
+    { "en": "It is a hot, hot day.", "zh": "今天好熱好熱。" },
+    { "en": "Buddy and Tiny ride the train.", "zh": "Buddy 和 Tiny 搭火車。" },
+    { "en": "They see a big Stegosaurus.", "zh": "他們看到一隻大劍龍。" },
+    { "en": "The Stegosaurus has big plates.", "zh": "劍龍的背上有大大的板子。" },
+    { "en": "The wind makes the plates cool.", "zh": "風把板子吹得涼涼的。" }
   ]
 }

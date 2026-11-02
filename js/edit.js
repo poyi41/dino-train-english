@@ -312,6 +312,33 @@ function renderDinosaurs() {
   );
 }
 
+// 小故事：每句 8 個字以內，超過時字數變橘色提醒
+const STORY_MAX_WORDS = 8;
+
+function renderStory() {
+  $('story').replaceChildren(
+    ...ep.story.map((line) => {
+      const row = el('div', 'edit-row');
+      const texts = el('div', 'row-texts');
+      const en = textInput(line, 'en', 'Short story sentence', 'en-field');
+      const count = el('span', 'word-count');
+      const updateCount = () => {
+        const n = line.en.trim() ? line.en.trim().split(/\s+/).length : 0;
+        count.textContent = `${n} 字`;
+        count.classList.toggle('over', n > STORY_MAX_WORDS);
+      };
+      en.addEventListener('input', updateCount);
+      updateCount();
+      texts.append(en, textInput(line, 'zh', '中文'));
+
+      const actions = el('div', 'row-actions');
+      actions.append(count, smallButton('🔊', () => speak(line.en), '聽朗讀'), deleteButton(ep.story, line, renderStory));
+      row.append(texts, actions);
+      return row;
+    }),
+  );
+}
+
 /* ---------- 存檔 ---------- */
 
 function validate() {
@@ -348,7 +375,8 @@ function formatEpisode() {
   "title": ${line({ en: trim(ep.title.en), zh: trim(ep.title.zh) })},
   "dinosaurs": ${list(ep.dinosaurs.map((d) => ({ en: trim(d.en), zh: trim(d.zh), emoji: trim(d.emoji) })))},
   "words": ${list(ep.words.map((w) => ({ en: trim(w.en), zh: trim(w.zh), time: round1(w.time), emoji: trim(w.emoji), core: w.core === true })))},
-  "sentences": ${list(ep.sentences.map((s) => ({ en: trim(s.en), zh: trim(s.zh), start: round1(s.start), end: round1(s.end), core: s.core === true })))}
+  "sentences": ${list(ep.sentences.map((s) => ({ en: trim(s.en), zh: trim(s.zh), start: round1(s.start), end: round1(s.end), core: s.core === true })))},
+  "story": ${list(ep.story.map((line) => ({ en: trim(line.en), zh: trim(line.zh) })))}
 }
 `;
 }
@@ -427,6 +455,7 @@ async function loadForEdit() {
       dinosaurs: [],
       words: [],
       sentences: [],
+      story: [],
     };
   }
   const id = params.get('ep');
@@ -436,6 +465,7 @@ async function loadForEdit() {
   data.dinosaurs ??= [];
   data.words ??= [];
   data.sentences ??= [];
+  data.story ??= [];
   return data;
 }
 
@@ -462,8 +492,16 @@ async function showEditor() {
   renderSentences();
   renderWords();
   renderDinosaurs();
+  renderStory();
 
   const now = () => (player ? player.getTime() : 0);
+
+  $('add-story').addEventListener('click', () => {
+    ep.story.push({ en: '', zh: '' });
+    markDirty();
+    renderStory();
+    $('story').lastElementChild.querySelector('input').focus();
+  });
 
   $('add-sentence').addEventListener('click', () => {
     const t = round1(now());

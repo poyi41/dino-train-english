@@ -24,5 +24,12 @@
     { "en": "Get ready, Buddy!", "zh": "Buddy，準備好！", "start": 530.9, "end": 533.4, "core": false },
     { "en": "We work together.", "zh": "我們一起合作。", "start": 621.5, "end": 623.5, "core": false },
     { "en": "I'm so proud of you!", "zh": "我真為你驕傲！", "start": 623.5, "end": 625.9, "core": false }
+  ],
+  "story": [
+    { "en": "Tiny can fly, but Buddy can not.", "zh": "Tiny 會飛，可是 Buddy 不會。" },
+    { "en": "Dad can catch a big fish.", "zh": "爸爸會抓大魚。" },
+    { "en": "Tiny can not catch a fish.", "zh": "Tiny 抓不到魚。" },
+    { "en": "Buddy can see the fish.", "zh": "Buddy 看得到魚。" },
+    { "en": "Buddy and Tiny catch fish together!", "zh": "Buddy 和 Tiny 一起抓到魚了！" }
   ]
 }

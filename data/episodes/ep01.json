@@ -28,5 +28,12 @@
     { "en": "Cool! Let's go!", "zh": "好酷！走吧！", "start": 480.6, "end": 483, "core": true },
     { "en": "It's hatching!", "zh": "要孵出來了！", "start": 499.6, "end": 502.3, "core": false },
     { "en": "I love you, Mom.", "zh": "媽媽，我愛妳。", "start": 601.7, "end": 604, "core": false }
+  ],
+  "story": [
+    { "en": "Buddy is a T. rex.", "zh": "Buddy 是一隻暴龍。" },
+    { "en": "Buddy wants big horns.", "zh": "Buddy 想要大大的角。" },
+    { "en": "They ride the train to see Spiky.", "zh": "他們搭火車去找 Spiky。" },
+    { "en": "Spiky has a lot of horns.", "zh": "Spiky 有好多角。" },
+    { "en": "Buddy has big teeth, not horns.", "zh": "Buddy 沒有角，但有大大的牙齒。" }
   ]
 }

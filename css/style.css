@@ -1204,3 +1204,88 @@ body {
   color: var(--orange);
   font-weight: 700;
 }
+
+/* ---------- 單集頁：小故事 ---------- */
+
+.zh-toggle {
+  min-width: var(--tap-min);
+  min-height: 48px;
+  margin-left: 12px;
+  padding: 4px 16px;
+  border: 3px solid #c8b89a;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text-soft);
+  font: inherit;
+  font-size: 20px;
+  font-weight: 800;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.zh-toggle[aria-pressed='true'] {
+  border-color: var(--green);
+  background: #e8f5e9;
+  color: var(--green-dark);
+}
+
+.story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.story-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 80px;
+  padding: 14px 20px;
+  border: 4px solid transparent;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.story-line .sentence-icon {
+  background: var(--sky);
+}
+
+.story-line.playing {
+  border-color: #ffca28;
+  background: #fffde7;
+}
+
+.story-text {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.story-word {
+  padding: 0 3px;
+  border-radius: 8px;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.story-word.reading {
+  background: #ffca28;
+  color: #3e2723;
+}
+
+.word-count {
+  align-self: center;
+  min-width: 44px;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.word-count.over {
+  color: var(--orange);
+  font-weight: 700;
+}

@@ -1,6 +1,6 @@
 import { loadEpisode, MAX_CORE } from './data.js';
 import { createPlayer } from './player.js';
-import { speak } from './speech.js';
+import { speak, speakWords } from './speech.js';
 import { el } from './dom.js';
 import { addProgress, getProgress, isWatched, markWatched, unmarkWatched } from './storage.js';
 import { askAdult } from './adult.js';
@@ -110,6 +110,57 @@ function renderSentences(sentences, playerReady) {
   document.getElementById('sentences-section').hidden = sentences.length === 0;
 }
 
+/* ---------- 小故事：點句子朗讀，唸到的字亮起來 ---------- */
+
+function renderStory(story, playerReady) {
+  const list = $('story');
+  let readingLine = null;
+
+  list.replaceChildren(
+    ...story.map((line) => {
+      const btn = el('button', 'story-line tappable');
+      btn.type = 'button';
+      const words = line.en.split(/\s+/).map((w) => el('span', 'story-word', w));
+      const text = el('div', 'story-text');
+      words.forEach((w, i) => text.append(...(i ? [' ', w] : [w])));
+      const zh = el('div', 'zh story-zh', line.zh);
+      zh.hidden = true;
+      const body = el('div', 'story-body');
+      body.append(text, zh);
+      btn.append(el('div', 'sentence-icon', '🔊'), body);
+
+      const clear = () => {
+        words.forEach((w) => w.classList.remove('reading'));
+        btn.classList.remove('playing');
+      };
+      btn.addEventListener('click', async () => {
+        readingLine?.();
+        readingLine = clear;
+        (await playerReady)?.pause(); // 朗讀時影片不要同時出聲
+        btn.classList.add('playing');
+        speakWords(line.en, {
+          onWord: (index) => {
+            words.forEach((w, i) => w.classList.toggle('reading', i === index));
+          },
+          onEnd: clear,
+        });
+      });
+      return btn;
+    }),
+  );
+
+  // 中文翻譯預設隱藏，按「中文」一次全部顯示或收起
+  const toggle = $('story-zh-toggle');
+  toggle.addEventListener('click', () => {
+    const show = toggle.getAttribute('aria-pressed') !== 'true';
+    toggle.setAttribute('aria-pressed', String(show));
+    list.querySelectorAll('.story-zh').forEach((zh) => {
+      zh.hidden = !show;
+    });
+  });
+  $('story-section').hidden = story.length === 0;
+}
+
 async function init() {
   if (location.protocol === 'file:') {
     showError('請用本機 server 開啟（見 README），直接開檔案無法播放影片。');
@@ -143,6 +194,7 @@ async function init() {
 
   renderWords(ep.words ?? [], playerReady);
   renderSentences(ep.sentences ?? [], playerReady);
+  renderStory(ep.story ?? [], playerReady);
   trackWatching(ep, playerReady);
   setupAdultMark(ep, playerReady);
 }
